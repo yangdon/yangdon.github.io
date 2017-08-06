@@ -1,51 +1,59 @@
 <!DOCTYPE html>
-<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
+<html lang=zh>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <%
-        function capitalize (str) { return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase() }
-        var title = page.title;
-        if (is_archive()) {
-            title = capitalize(__('index.archive'));
-            if (is_month()) {
-                title += ': ' + page.year + '/' + page.month;
-            } else if (is_year()) {
-                title += ': ' + page.year;
-            }
-        } else if (is_category()) {
-            title = capitalize(__('index.category')) + ': ' + page.category;
-        } else if (is_tag()) {
-            title = capitalize(__('index.tag')) + ': ' + page.tag;
-        }
-    %>
-    <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+    
+    <title>Static NGINX Locations | YANGDON&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <%- open_graph({
-        image:          thumbnail(page),
-        fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
-        fb_admins:      theme.miscellaneous.open_graph.fb_admins,
-        twitter_id:     theme.miscellaneous.open_graph.twitter_id,
-        google_plus:    theme.miscellaneous.open_graph.google_plus,
-    }) %>
-    <%- meta(page) %>
+    <meta name="description" content="I try to get a lot of mileage out of the single AWS t2.micro instance I keep running,which means I have many different projects running on different paths on a single server.  Everytime I finish a pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Static NGINX Locations">
+<meta property="og:url" content="https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/index.html">
+<meta property="og:site_name" content="YANGDON's Blog">
+<meta property="og:description" content="I try to get a lot of mileage out of the single AWS t2.micro instance I keep running,which means I have many different projects running on different paths on a single server.  Everytime I finish a pro">
+<meta property="og:image" content="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png">
+<meta property="og:updated_time" content="2017-03-16T07:54:28.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Static NGINX Locations">
+<meta name="twitter:description" content="I try to get a lot of mileage out of the single AWS t2.micro instance I keep running,which means I have many different projects running on different paths on a single server.  Everytime I finish a pro">
+<meta name="twitter:image" content="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png">
+    
 
-    <% if (theme.customize && theme.customize.social_links && theme.customize.social_links.rss) { %>
-        <link rel="alternate" href="<%- theme.customize.social_links.rss %>" title="<%= config.title %>" type="application/atom+xml" />
-    <% } %>
+    
 
-    <% if (theme.customize.favicon) { %>
-        <link rel="icon" href="<%- url_for(theme.customize.favicon) %>" />
-    <% } %>
+    
 
-    <%- css('libs/font-awesome/css/font-awesome.min') %>
-    <%- css('libs/open-sans/styles') %>
-    <%- css('libs/source-code-pro/styles') %>
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
-    <%- css('css/style') %>
+    <link rel="stylesheet" href="/css/style.css">
 
-    <%- js('libs/jquery/2.1.3/jquery.min') %>
-    <%- partial('plugin/scripts', { isHead: true }) %>
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?06ba7a0c685e58538745af909fea7a0b";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
 </head>
 
 <body>
@@ -259,7 +267,7 @@ location /array {
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/" data-id="cj60t084z000aw396nf55ntif" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/" data-id="cj60t6x8200041n96h904ed3w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
