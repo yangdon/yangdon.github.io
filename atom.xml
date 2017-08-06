@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangdon.github.io/"/>
-  <updated>2017-06-19T02:06:59.497Z</updated>
+  <updated>2017-06-19T05:51:57.141Z</updated>
   <id>https://yangdon.github.io/</id>
   
   <author>
@@ -20,9 +20,17 @@
     <link href="https://yangdon.github.io/2017/06/19/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/"/>
     <id>https://yangdon.github.io/2017/06/19/第一章-操作系统引论/</id>
     <published>2017-06-19T02:06:59.000Z</published>
-    <updated>2017-06-19T02:06:59.497Z</updated>
+    <updated>2017-06-19T05:51:57.141Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-设计现代OS的主要目标是什么？"><a href="#1-设计现代OS的主要目标是什么？" class="headerlink" title="1.设计现代OS的主要目标是什么？"></a>1.设计现代OS的主要目标是什么？</h4><blockquote>
+<p>方便性，有效性，可扩充性，和开放性。</p>
+<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4></blockquote>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h4 id=&quot;1-设计现代OS的主要目标是什么？&quot;&gt;&lt;a href=&quot;#1-设计现代OS的主要目标是什么？&quot; class=&quot;headerlink&quot; title=&quot;1.设计现代OS的主要目标是什么？&quot;&gt;&lt;/a&gt;1.设计现代OS的主要目标是什么？&lt;/h4&gt;&lt;blockquote&gt;
+
     
     </summary>
     
