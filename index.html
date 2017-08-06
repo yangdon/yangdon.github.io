@@ -1,53 +1,51 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
-    <title>YANGDON&#39;s Blog</title>
+    <%
+        function capitalize (str) { return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase() }
+        var title = page.title;
+        if (is_archive()) {
+            title = capitalize(__('index.archive'));
+            if (is_month()) {
+                title += ': ' + page.year + '/' + page.month;
+            } else if (is_year()) {
+                title += ': ' + page.year;
+            }
+        } else if (is_category()) {
+            title = capitalize(__('index.category')) + ': ' + page.category;
+        } else if (is_tag()) {
+            title = capitalize(__('index.tag')) + ': ' + page.tag;
+        }
+    %>
+    <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="YANGDON's Blog">
-<meta property="og:url" content="https://yangdon.github.io/index.html">
-<meta property="og:site_name" content="YANGDON's Blog">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YANGDON's Blog">
-    
+    <%- open_graph({
+        image:          thumbnail(page),
+        fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
+        fb_admins:      theme.miscellaneous.open_graph.fb_admins,
+        twitter_id:     theme.miscellaneous.open_graph.twitter_id,
+        google_plus:    theme.miscellaneous.open_graph.google_plus,
+    }) %>
+    <%- meta(page) %>
 
-    
+    <% if (theme.customize && theme.customize.social_links && theme.customize.social_links.rss) { %>
+        <link rel="alternate" href="<%- theme.customize.social_links.rss %>" title="<%= config.title %>" type="application/atom+xml" />
+    <% } %>
 
-    
+    <% if (theme.customize.favicon) { %>
+        <link rel="icon" href="<%- url_for(theme.customize.favicon) %>" />
+    <% } %>
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <%- css('libs/font-awesome/css/font-awesome.min') %>
+    <%- css('libs/open-sans/styles') %>
+    <%- css('libs/source-code-pro/styles') %>
 
-    <link rel="stylesheet" href="/css/style.css">
+    <%- css('css/style') %>
 
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-    
-    
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-    
-    
-    
-    
-        <script>
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?06ba7a0c685e58538745af909fea7a0b";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-    
-
-
+    <%- js('libs/jquery/2.1.3/jquery.min') %>
+    <%- partial('plugin/scripts', { isHead: true }) %>
 </head>
 
 <body>
@@ -238,7 +236,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2017/06/19/第一章-操作系统引论/" data-id="cj60spr1v000cs696c8547n4s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2017/06/19/第一章-操作系统引论/" data-id="cj60t0858000mw396c1qmdmt9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -385,7 +383,7 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/" data-id="cj60spr21000ms696zcas5gsd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/" data-id="cj60t0854000gw396qh3a5kfw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -518,7 +516,7 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2015/05/02/2015-05-02-How-To-Impress/" data-id="cj60spr1s000as6967ly3kzh4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2015/05/02/2015-05-02-How-To-Impress/" data-id="cj60t0856000jw396yu4c6xvu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -656,7 +654,7 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2015/04/08/2015-04-08-NAV-Programming-Resources/" data-id="cj60spr1n0008s696vwamgr8r" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2015/04/08/2015-04-08-NAV-Programming-Resources/" data-id="cj60t084u0008w396h0xq3kma" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -794,7 +792,7 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2015/04/05/2015-04-05-Lookup-on-Page/" data-id="cj60spr1x000gs696hdjs3omc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2015/04/05/2015-04-05-Lookup-on-Page/" data-id="cj60t0852000cw396ffvd33b0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -942,7 +940,7 @@ location /array {
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/" data-id="cj60spr1f0004s6967hzgcw1p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/" data-id="cj60t084z000aw396nf55ntif" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1084,7 +1082,7 @@ location /array {
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/" data-id="cj60spr1a0002s696mgnty9gl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/" data-id="cj60t084n0004w396miyxltsp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1218,7 +1216,7 @@ location /array {
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2014/02/23/2014-02-23-hello-world/" data-id="cj60spr1z000js696dhh3pyzw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2014/02/23/2014-02-23-hello-world/" data-id="cj60t084g0002w396sd8k7x0u" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
