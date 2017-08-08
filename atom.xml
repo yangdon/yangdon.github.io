@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://yangdon.github.io/"/>
+  <link href="http://blog.yangdon.cn/"/>
   <updated>2017-06-19T05:51:57.141Z</updated>
-  <id>https://yangdon.github.io/</id>
+  <id>http://blog.yangdon.cn/</id>
   
   <author>
     <name>Yang Don</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>第一章 操作系统引论</title>
-    <link href="https://yangdon.github.io/2017/06/19/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/"/>
-    <id>https://yangdon.github.io/2017/06/19/第一章-操作系统引论/</id>
+    <link href="http://blog.yangdon.cn/2017/06/19/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/"/>
+    <id>http://blog.yangdon.cn/2017/06/19/第一章-操作系统引论/</id>
     <published>2017-06-19T02:06:59.000Z</published>
     <updated>2017-06-19T05:51:57.141Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Notes On Creating A Hexo Theme</title>
-    <link href="https://yangdon.github.io/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/"/>
-    <id>https://yangdon.github.io/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/</id>
+    <link href="http://blog.yangdon.cn/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/"/>
+    <id>http://blog.yangdon.cn/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/</id>
     <published>2016-01-01T16:00:00.000Z</published>
     <updated>2017-03-16T07:54:28.989Z</updated>
     
@@ -70,19 +70,19 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     
     </summary>
     
-      <category term="Hexo" scheme="https://yangdon.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.yangdon.cn/categories/Hexo/"/>
     
     
-      <category term="Programming" scheme="https://yangdon.github.io/tags/Programming/"/>
+      <category term="Programming" scheme="http://blog.yangdon.cn/tags/Programming/"/>
     
-      <category term="Design" scheme="https://yangdon.github.io/tags/Design/"/>
+      <category term="Design" scheme="http://blog.yangdon.cn/tags/Design/"/>
     
   </entry>
   
   <entry>
     <title>How To Impress Employers at Infosessions</title>
-    <link href="https://yangdon.github.io/2015/05/02/2015-05-02-How-To-Impress/"/>
-    <id>https://yangdon.github.io/2015/05/02/2015-05-02-How-To-Impress/</id>
+    <link href="http://blog.yangdon.cn/2015/05/02/2015-05-02-How-To-Impress/"/>
+    <id>http://blog.yangdon.cn/2015/05/02/2015-05-02-How-To-Impress/</id>
     <published>2015-05-01T16:00:00.000Z</published>
     <updated>2017-03-16T07:54:28.989Z</updated>
     
@@ -111,19 +111,19 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     
     </summary>
     
-      <category term="Humor" scheme="https://yangdon.github.io/categories/Humor/"/>
+      <category term="Humor" scheme="http://blog.yangdon.cn/categories/Humor/"/>
     
     
-      <category term="funny" scheme="https://yangdon.github.io/tags/funny/"/>
+      <category term="funny" scheme="http://blog.yangdon.cn/tags/funny/"/>
     
-      <category term="employment" scheme="https://yangdon.github.io/tags/employment/"/>
+      <category term="employment" scheme="http://blog.yangdon.cn/tags/employment/"/>
     
   </entry>
   
   <entry>
     <title>NAV Web Service Programming Resources</title>
-    <link href="https://yangdon.github.io/2015/04/08/2015-04-08-NAV-Programming-Resources/"/>
-    <id>https://yangdon.github.io/2015/04/08/2015-04-08-NAV-Programming-Resources/</id>
+    <link href="http://blog.yangdon.cn/2015/04/08/2015-04-08-NAV-Programming-Resources/"/>
+    <id>http://blog.yangdon.cn/2015/04/08/2015-04-08-NAV-Programming-Resources/</id>
     <published>2015-04-07T16:00:00.000Z</published>
     <updated>2017-03-16T07:54:28.989Z</updated>
     
@@ -143,19 +143,19 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     
     </summary>
     
-      <category term="Dynamics NAV" scheme="https://yangdon.github.io/categories/Dynamics-NAV/"/>
+      <category term="Dynamics NAV" scheme="http://blog.yangdon.cn/categories/Dynamics-NAV/"/>
     
     
-      <category term="Resources" scheme="https://yangdon.github.io/tags/Resources/"/>
+      <category term="Resources" scheme="http://blog.yangdon.cn/tags/Resources/"/>
     
-      <category term="NAV" scheme="https://yangdon.github.io/tags/NAV/"/>
+      <category term="NAV" scheme="http://blog.yangdon.cn/tags/NAV/"/>
     
   </entry>
   
   <entry>
     <title>Adding Lookup Field to a Page in Dynamics NAV</title>
-    <link href="https://yangdon.github.io/2015/04/05/2015-04-05-Lookup-on-Page/"/>
-    <id>https://yangdon.github.io/2015/04/05/2015-04-05-Lookup-on-Page/</id>
+    <link href="http://blog.yangdon.cn/2015/04/05/2015-04-05-Lookup-on-Page/"/>
+    <id>http://blog.yangdon.cn/2015/04/05/2015-04-05-Lookup-on-Page/</id>
     <published>2015-04-04T16:00:00.000Z</published>
     <updated>2017-03-16T07:54:28.989Z</updated>
     
@@ -174,19 +174,19 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     
     </summary>
     
-      <category term="Dynamics NAV" scheme="https://yangdon.github.io/categories/Dynamics-NAV/"/>
+      <category term="Dynamics NAV" scheme="http://blog.yangdon.cn/categories/Dynamics-NAV/"/>
     
     
-      <category term="Resources" scheme="https://yangdon.github.io/tags/Resources/"/>
+      <category term="Resources" scheme="http://blog.yangdon.cn/tags/Resources/"/>
     
-      <category term="NAV" scheme="https://yangdon.github.io/tags/NAV/"/>
+      <category term="NAV" scheme="http://blog.yangdon.cn/tags/NAV/"/>
     
   </entry>
   
   <entry>
     <title>Static NGINX Locations</title>
-    <link href="https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/"/>
-    <id>https://yangdon.github.io/2015/04/01/2015-04-01-NGINX-Static-Locations/</id>
+    <link href="http://blog.yangdon.cn/2015/04/01/2015-04-01-NGINX-Static-Locations/"/>
+    <id>http://blog.yangdon.cn/2015/04/01/2015-04-01-NGINX-Static-Locations/</id>
     <published>2015-03-31T16:00:00.000Z</published>
     <updated>2017-03-16T07:54:28.989Z</updated>
     
@@ -215,17 +215,17 @@ location /array {
     
     </summary>
     
-      <category term="NGINX" scheme="https://yangdon.github.io/categories/NGINX/"/>
+      <category term="NGINX" scheme="http://blog.yangdon.cn/categories/NGINX/"/>
     
     
-      <category term="Web Development" scheme="https://yangdon.github.io/tags/Web-Development/"/>
+      <category term="Web Development" scheme="http://blog.yangdon.cn/tags/Web-Development/"/>
     
   </entry>
   
   <entry>
     <title>Spaces for Newline Indents in VS</title>
-    <link href="https://yangdon.github.io/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/"/>
-    <id>https://yangdon.github.io/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/</id>
+    <link href="http://blog.yangdon.cn/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/"/>
+    <id>http://blog.yangdon.cn/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/</id>
     <published>2015-03-22T16:00:00.000Z</published>
     <updated>2017-03-16T07:54:28.989Z</updated>
     
@@ -250,19 +250,19 @@ location /array {
     
     </summary>
     
-      <category term=".NET" scheme="https://yangdon.github.io/categories/NET/"/>
+      <category term=".NET" scheme="http://blog.yangdon.cn/categories/NET/"/>
     
     
-      <category term="C#" scheme="https://yangdon.github.io/tags/C/"/>
+      <category term="C#" scheme="http://blog.yangdon.cn/tags/C/"/>
     
-      <category term="Visual Studio" scheme="https://yangdon.github.io/tags/Visual-Studio/"/>
+      <category term="Visual Studio" scheme="http://blog.yangdon.cn/tags/Visual-Studio/"/>
     
   </entry>
   
   <entry>
     <title>Welcome To Hexo</title>
-    <link href="https://yangdon.github.io/2014/02/23/2014-02-23-hello-world/"/>
-    <id>https://yangdon.github.io/2014/02/23/2014-02-23-hello-world/</id>
+    <link href="http://blog.yangdon.cn/2014/02/23/2014-02-23-hello-world/"/>
+    <id>http://blog.yangdon.cn/2014/02/23/2014-02-23-hello-world/</id>
     <published>2014-02-22T16:00:00.000Z</published>
     <updated>2017-05-23T14:41:06.561Z</updated>
     
@@ -285,12 +285,12 @@ location /array {
     
     </summary>
     
-      <category term="Hexo" scheme="https://yangdon.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.yangdon.cn/categories/Hexo/"/>
     
     
-      <category term="Welcome" scheme="https://yangdon.github.io/tags/Welcome/"/>
+      <category term="Welcome" scheme="http://blog.yangdon.cn/tags/Welcome/"/>
     
-      <category term="How-To" scheme="https://yangdon.github.io/tags/How-To/"/>
+      <category term="How-To" scheme="http://blog.yangdon.cn/tags/How-To/"/>
     
   </entry>
   
