@@ -4,23 +4,33 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
-    <title>JAVA--JNI基础 | YANGDON&#39;s Blog</title>
+    <title>redis--redis安装与配置 | YANGDON&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="JNI概述JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。
-JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持J">
+    <meta name="description" content="redis–redis安装与配置一、redis安装获取redis最新的安装包：
+1wget http://download.redis.io/releases/redis-x.x.x.tar.gz
+开始安装：
+1234tar -zxvf redis-x.x.x.tar.gzcd redis-x.x.xmakemake install
+配置redis.config文件：
+123sudo mkdir">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA--JNI基础">
-<meta property="og:url" content="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/index.html">
+<meta property="og:title" content="redis--redis安装与配置">
+<meta property="og:url" content="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/index.html">
 <meta property="og:site_name" content="YANGDON's Blog">
-<meta property="og:description" content="JNI概述JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。
-JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持J">
-<meta property="og:image" content="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif">
-<meta property="og:updated_time" content="2017-08-08T16:31:05.786Z">
+<meta property="og:description" content="redis–redis安装与配置一、redis安装获取redis最新的安装包：
+1wget http://download.redis.io/releases/redis-x.x.x.tar.gz
+开始安装：
+1234tar -zxvf redis-x.x.x.tar.gzcd redis-x.x.xmakemake install
+配置redis.config文件：
+123sudo mkdir">
+<meta property="og:updated_time" content="2017-11-01T14:13:47.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA--JNI基础">
-<meta name="twitter:description" content="JNI概述JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。
-JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持J">
-<meta name="twitter:image" content="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif">
+<meta name="twitter:title" content="redis--redis安装与配置">
+<meta name="twitter:description" content="redis–redis安装与配置一、redis安装获取redis最新的安装包：
+1wget http://download.redis.io/releases/redis-x.x.x.tar.gz
+开始安装：
+1234tar -zxvf redis-x.x.x.tar.gzcd redis-x.x.xmakemake install
+配置redis.config文件：
+123sudo mkdir">
     
 
     
@@ -192,7 +202,7 @@ var _hmt = _hmt || [];
 </aside>
 
             
-            <section id="main"><article id="post-JAVA-JNI基础" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-redis-redis安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -200,7 +210,7 @@ var _hmt = _hmt || [];
                 
     
         <h1 class="article-title" itemprop="name">
-            JAVA--JNI基础
+            redis--redis安装与配置
         </h1>
     
 
@@ -209,19 +219,14 @@ var _hmt = _hmt || [];
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/08/08/JAVA-JNI基础/">
-            <time datetime="2017-08-08T11:55:51.000Z" itemprop="datePublished">2017-08-08</time>
+        <a href="/2017/11/01/redis-redis安装与配置/">
+            <time datetime="2017-11-01T13:49:42.000Z" itemprop="datePublished">2017-11-01</time>
         </a>
     </div>
 
 
                         
                         
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jni/">jni</a>
-    </div>
-
                     </div>
                 
             </header>
@@ -230,23 +235,27 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="JNI概述"><a href="#JNI概述" class="headerlink" title="JNI概述"></a>JNI概述</h2><p>JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。</p>
-<p>JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持JNI的所有Java VM配合使用。</p>
-<p>通过JNI编程，您可以使用本机方法：</p>
-<ul>
-<li>创建，检查和更新Java对象（包括数组和字符串）。</li>
-<li>调用Java方法。</li>
-<li>抓住并抛出异常。</li>
-<li>加载类并获取类信息。</li>
-<li>执行运行时类型检查。</li>
-</ul>
-<p>您还可以使用JNI与Invocation API来启用任意本地应用程序来嵌入Java VM。这使得程序员可以轻松地使其现有应用程序启用Java，而无需与VM源代码链接。</p>
-<h2 id="JNI接口指针"><a href="#JNI接口指针" class="headerlink" title="JNI接口指针"></a>JNI接口指针</h2><p>本地代码(Native code)通过调用JNI函数来访问Java VM功能。JNI函数可通过接口指针获得。接口指针是指向指针的指针。指针指向一个指针数组，每个指针指向一个接口函数。每个接口函数都在数组内的一个预定义的偏移量。</p>
-<p>JNI接口指针：</p>
-<p><img src="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif" alt="Alt text"></p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>本地方法(Native methods)被加载通过调用<code>System.loadLibrary</code>方法。例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pkg;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cls</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">native</span> <span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> i, String s)</span></span>;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.loadLibrary(“pkg_Cls”);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><em>注意： <code>System.loadLibrary</code>的参数是由程序员任意选择的库名称。但依据不同的系统必须遵循相应的库名称标准，例如：Unix/Linux系统将<code>pkg_Cl</code>名称转换为libpkg_Cls.so，而Win32系统将相同的<code>pkg_Cls</code>名称转换为pkg_Cls.dll。</em></p>
+            <h1 id="redis–redis安装与配置"><a href="#redis–redis安装与配置" class="headerlink" title="redis–redis安装与配置"></a>redis–redis安装与配置</h1><h2 id="一、redis安装"><a href="#一、redis安装" class="headerlink" title="一、redis安装"></a>一、redis安装</h2><p>获取redis最新的安装包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-x.x.x.tar.gz</div></pre></td></tr></table></figure>
+<p>开始安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar -zxvf redis-x.x.x.tar.gz</div><div class="line"><span class="built_in">cd</span> redis-x.x.x</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<p>配置redis.config文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /etc/redis</div><div class="line">sudo cp ./redis.config /etc/redis/6379.config</div><div class="line">sudo vim /etc/redis/6379.config</div></pre></td></tr></table></figure>
+<p>6379.config只需作如下内容的修改:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># By default Redis does not run as a daemon. Use &apos;yes&apos; if you need it.</div><div class="line"># Note that Redis will write a pid file in /var/run/redis.pid when daemonized.</div><div class="line">daemonize yes                 # 将daemonize属性改为yes（表明需要在后台运行）(136行附近)</div><div class="line"></div><div class="line"># Note that you must specify a directory here, not a file name.</div><div class="line">dir /usr/local/redis/data     # 设置dump.rdb文件的存储路径(263行附近)</div><div class="line"></div><div class="line"># requirepass foobared</div><div class="line">requirepass root123           # 设置redis的密码(500行附近)</div></pre></td></tr></table></figure>
+<p>添加dump.rdb文件的存储路径：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /usr/<span class="built_in">local</span>/redis/data</div><div class="line">sudo chmod 766 -R /usr/<span class="built_in">local</span>/redis/</div></pre></td></tr></table></figure>
+<p>配置redis的启动参数:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> redis-x.x.x</div><div class="line"><span class="built_in">cd</span> utils</div><div class="line">sudo cp ./redis_init_script /etc/init.d/redis_6379</div></pre></td></tr></table></figure>
+<p>并对redis_6379文件进行修改，具体内容作如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Simple Redis init.d script conceived to work on Linux systems</span></div><div class="line"><span class="comment"># as it does use of the /proc filesystem.</span></div><div class="line"></div><div class="line">REDISPORT=6379</div><div class="line">EXEC=/usr/<span class="built_in">local</span>/bin/redis-server</div><div class="line">CLIEXEC=/usr/<span class="built_in">local</span>/bin/redis-cli</div><div class="line"></div><div class="line">PIDFILE=/var/run/redis_<span class="variable">$&#123;REDISPORT&#125;</span>.pid</div><div class="line">CONF=<span class="string">"/etc/redis/<span class="variable">$&#123;REDISPORT&#125;</span>.conf"</span></div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></div><div class="line">    start)</div><div class="line">        <span class="keyword">if</span> [ <span class="_">-f</span> <span class="variable">$PIDFILE</span> ]</div><div class="line">        <span class="keyword">then</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"<span class="variable">$PIDFILE</span> exists, process is already running or crashed"</span></div><div class="line">        <span class="keyword">else</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"Starting Redis server..."</span></div><div class="line">                <span class="variable">$EXEC</span> <span class="variable">$CONF</span></div><div class="line">        <span class="keyword">fi</span></div><div class="line">        ;;</div><div class="line">    stop)</div><div class="line">        <span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="variable">$PIDFILE</span> ]</div><div class="line">        <span class="keyword">then</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"<span class="variable">$PIDFILE</span> does not exist, process is not running"</span></div><div class="line">        <span class="keyword">else</span></div><div class="line">                PID=$(cat <span class="variable">$PIDFILE</span>)</div><div class="line">                <span class="built_in">echo</span> <span class="string">"Stopping ..."</span></div><div class="line">                <span class="variable">$CLIEXEC</span> <span class="_">-a</span> <span class="string">"root123"</span> -p <span class="variable">$REDISPORT</span> shutdown <span class="comment"># 添加'-a "root123"'</span></div><div class="line">                <span class="keyword">while</span> [ -x /proc/<span class="variable">$&#123;PID&#125;</span> ]</div><div class="line">                <span class="keyword">do</span></div><div class="line">                    <span class="built_in">echo</span> <span class="string">"Waiting for Redis to shutdown ..."</span></div><div class="line">                    sleep 1</div><div class="line">                <span class="keyword">done</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"Redis stopped"</span></div><div class="line">        <span class="keyword">fi</span></div><div class="line">        ;;</div><div class="line">    *)</div><div class="line">        <span class="built_in">echo</span> <span class="string">"Please use start or stop as first argument"</span></div><div class="line">        ;;</div><div class="line"><span class="keyword">esac</span></div></pre></td></tr></table></figure>
+<p>至此，redis的安装与配置完成。</p>
+<h2 id="二、运行redis-server-后台服务-与redis-cli-客户端"><a href="#二、运行redis-server-后台服务-与redis-cli-客户端" class="headerlink" title="二、运行redis-server(后台服务)与redis-cli(客户端)"></a>二、运行redis-server(后台服务)与redis-cli(客户端)</h2><p>运行redis-server：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo service redis_6379 start     <span class="comment"># 启动redis后台服务</span></div><div class="line">sudo service redis_6379 stop      <span class="comment"># 停止redis后台服务</span></div></pre></td></tr></table></figure>
+<p>运行redis-cli(客户端):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">redis-cli <span class="_">-a</span> root123</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redis-cli</div><div class="line">auth root123</div></pre></td></tr></table></figure>
 
         
         </div>
@@ -257,7 +266,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/" data-id="cj9iord7l000200964inqo05o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/" data-id="cj9iorda9000l00963z7d8yo2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -325,7 +334,7 @@ var _hmt = _hmt || [];
 
             
     
-        <a href="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/#comments" class="article-comment-link">评论</a>
+        <a href="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -334,15 +343,11 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
-        <a href="/2017/09/22/shiro-笔记一/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    shiro--笔记一
-                
-            </div>
-        </a>
     
+        <a href="/2017/11/01/java-jedis配置/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">java--jedis配置</div>
+        </a>
     
 </nav>
 

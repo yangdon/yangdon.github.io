@@ -155,11 +155,11 @@ var _hmt = _hmt || [];
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                1
+                12
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                1
+                9
                 <span>标签</span>
             </div>
         </div>
@@ -184,7 +184,7 @@ var _hmt = _hmt || [];
 
             
             <section id="main">
-    <article id="post-JAVA-JNI基础" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-redis-redis安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/08/08/JAVA-JNI基础/">JAVA--JNI基础</a>
+            <a class="article-title" href="/2017/11/01/redis-redis安装与配置/">redis--redis安装与配置</a>
         </h1>
     
 
@@ -201,19 +201,14 @@ var _hmt = _hmt || [];
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/08/08/JAVA-JNI基础/">
-            <time datetime="2017-08-08T11:55:51.000Z" itemprop="datePublished">2017-08-08</time>
+        <a href="/2017/11/01/redis-redis安装与配置/">
+            <time datetime="2017-11-01T13:49:42.000Z" itemprop="datePublished">2017-11-01</time>
         </a>
     </div>
 
 
                         
                         
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jni/">jni</a>
-    </div>
-
                     </div>
                 
             </header>
@@ -222,23 +217,27 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="JNI概述"><a href="#JNI概述" class="headerlink" title="JNI概述"></a>JNI概述</h2><p>JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。</p>
-<p>JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持JNI的所有Java VM配合使用。</p>
-<p>通过JNI编程，您可以使用本机方法：</p>
-<ul>
-<li>创建，检查和更新Java对象（包括数组和字符串）。</li>
-<li>调用Java方法。</li>
-<li>抓住并抛出异常。</li>
-<li>加载类并获取类信息。</li>
-<li>执行运行时类型检查。</li>
-</ul>
-<p>您还可以使用JNI与Invocation API来启用任意本地应用程序来嵌入Java VM。这使得程序员可以轻松地使其现有应用程序启用Java，而无需与VM源代码链接。</p>
-<h2 id="JNI接口指针"><a href="#JNI接口指针" class="headerlink" title="JNI接口指针"></a>JNI接口指针</h2><p>本地代码(Native code)通过调用JNI函数来访问Java VM功能。JNI函数可通过接口指针获得。接口指针是指向指针的指针。指针指向一个指针数组，每个指针指向一个接口函数。每个接口函数都在数组内的一个预定义的偏移量。</p>
-<p>JNI接口指针：</p>
-<p><img src="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif" alt="Alt text"></p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>本地方法(Native methods)被加载通过调用<code>System.loadLibrary</code>方法。例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pkg;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cls</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">native</span> <span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> i, String s)</span></span>;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.loadLibrary(“pkg_Cls”);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><em>注意： <code>System.loadLibrary</code>的参数是由程序员任意选择的库名称。但依据不同的系统必须遵循相应的库名称标准，例如：Unix/Linux系统将<code>pkg_Cl</code>名称转换为libpkg_Cls.so，而Win32系统将相同的<code>pkg_Cls</code>名称转换为pkg_Cls.dll。</em></p>
+            <h1 id="redis–redis安装与配置"><a href="#redis–redis安装与配置" class="headerlink" title="redis–redis安装与配置"></a>redis–redis安装与配置</h1><h2 id="一、redis安装"><a href="#一、redis安装" class="headerlink" title="一、redis安装"></a>一、redis安装</h2><p>获取redis最新的安装包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-x.x.x.tar.gz</div></pre></td></tr></table></figure>
+<p>开始安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar -zxvf redis-x.x.x.tar.gz</div><div class="line"><span class="built_in">cd</span> redis-x.x.x</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<p>配置redis.config文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /etc/redis</div><div class="line">sudo cp ./redis.config /etc/redis/6379.config</div><div class="line">sudo vim /etc/redis/6379.config</div></pre></td></tr></table></figure>
+<p>6379.config只需作如下内容的修改:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># By default Redis does not run as a daemon. Use &apos;yes&apos; if you need it.</div><div class="line"># Note that Redis will write a pid file in /var/run/redis.pid when daemonized.</div><div class="line">daemonize yes                 # 将daemonize属性改为yes（表明需要在后台运行）(136行附近)</div><div class="line"></div><div class="line"># Note that you must specify a directory here, not a file name.</div><div class="line">dir /usr/local/redis/data     # 设置dump.rdb文件的存储路径(263行附近)</div><div class="line"></div><div class="line"># requirepass foobared</div><div class="line">requirepass root123           # 设置redis的密码(500行附近)</div></pre></td></tr></table></figure>
+<p>添加dump.rdb文件的存储路径：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /usr/<span class="built_in">local</span>/redis/data</div><div class="line">sudo chmod 766 -R /usr/<span class="built_in">local</span>/redis/</div></pre></td></tr></table></figure>
+<p>配置redis的启动参数:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> redis-x.x.x</div><div class="line"><span class="built_in">cd</span> utils</div><div class="line">sudo cp ./redis_init_script /etc/init.d/redis_6379</div></pre></td></tr></table></figure>
+<p>并对redis_6379文件进行修改，具体内容作如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Simple Redis init.d script conceived to work on Linux systems</span></div><div class="line"><span class="comment"># as it does use of the /proc filesystem.</span></div><div class="line"></div><div class="line">REDISPORT=6379</div><div class="line">EXEC=/usr/<span class="built_in">local</span>/bin/redis-server</div><div class="line">CLIEXEC=/usr/<span class="built_in">local</span>/bin/redis-cli</div><div class="line"></div><div class="line">PIDFILE=/var/run/redis_<span class="variable">$&#123;REDISPORT&#125;</span>.pid</div><div class="line">CONF=<span class="string">"/etc/redis/<span class="variable">$&#123;REDISPORT&#125;</span>.conf"</span></div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></div><div class="line">    start)</div><div class="line">        <span class="keyword">if</span> [ <span class="_">-f</span> <span class="variable">$PIDFILE</span> ]</div><div class="line">        <span class="keyword">then</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"<span class="variable">$PIDFILE</span> exists, process is already running or crashed"</span></div><div class="line">        <span class="keyword">else</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"Starting Redis server..."</span></div><div class="line">                <span class="variable">$EXEC</span> <span class="variable">$CONF</span></div><div class="line">        <span class="keyword">fi</span></div><div class="line">        ;;</div><div class="line">    stop)</div><div class="line">        <span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="variable">$PIDFILE</span> ]</div><div class="line">        <span class="keyword">then</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"<span class="variable">$PIDFILE</span> does not exist, process is not running"</span></div><div class="line">        <span class="keyword">else</span></div><div class="line">                PID=$(cat <span class="variable">$PIDFILE</span>)</div><div class="line">                <span class="built_in">echo</span> <span class="string">"Stopping ..."</span></div><div class="line">                <span class="variable">$CLIEXEC</span> <span class="_">-a</span> <span class="string">"root123"</span> -p <span class="variable">$REDISPORT</span> shutdown <span class="comment"># 添加'-a "root123"'</span></div><div class="line">                <span class="keyword">while</span> [ -x /proc/<span class="variable">$&#123;PID&#125;</span> ]</div><div class="line">                <span class="keyword">do</span></div><div class="line">                    <span class="built_in">echo</span> <span class="string">"Waiting for Redis to shutdown ..."</span></div><div class="line">                    sleep 1</div><div class="line">                <span class="keyword">done</span></div><div class="line">                <span class="built_in">echo</span> <span class="string">"Redis stopped"</span></div><div class="line">        <span class="keyword">fi</span></div><div class="line">        ;;</div><div class="line">    *)</div><div class="line">        <span class="built_in">echo</span> <span class="string">"Please use start or stop as first argument"</span></div><div class="line">        ;;</div><div class="line"><span class="keyword">esac</span></div></pre></td></tr></table></figure>
+<p>至此，redis的安装与配置完成。</p>
+<h2 id="二、运行redis-server-后台服务-与redis-cli-客户端"><a href="#二、运行redis-server-后台服务-与redis-cli-客户端" class="headerlink" title="二、运行redis-server(后台服务)与redis-cli(客户端)"></a>二、运行redis-server(后台服务)与redis-cli(客户端)</h2><p>运行redis-server：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo service redis_6379 start     <span class="comment"># 启动redis后台服务</span></div><div class="line">sudo service redis_6379 stop      <span class="comment"># 停止redis后台服务</span></div></pre></td></tr></table></figure>
+<p>运行redis-cli(客户端):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">redis-cli <span class="_">-a</span> root123</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redis-cli</div><div class="line">auth root123</div></pre></td></tr></table></figure>
 
         
         </div>
@@ -249,7 +248,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/" data-id="cj7u4fhtt0001nj969rivbdcd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/" data-id="cj9iorda9000l00963z7d8yo2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -317,7 +316,7 @@ var _hmt = _hmt || [];
 
             
     
-        <a href="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/#comments" class="article-comment-link">评论</a>
+        <a href="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -326,6 +325,1238 @@ var _hmt = _hmt || [];
 </article>
 
 
+
+    <article id="post-java-jedis配置" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/11/01/java-jedis配置/">java--jedis配置</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/11/01/java-jedis配置/">
+            <time datetime="2017-11-01T13:03:05.000Z" itemprop="datePublished">2017-11-01</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/java-jedis/">java jedis</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="java–jedis配置"><a href="#java–jedis配置" class="headerlink" title="java–jedis配置"></a>java–jedis配置</h1>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/11/01/java-jedis配置/" data-id="cj9iorda0000g00964zidj8z8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/11/01/java-jedis配置/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-mybatis-表高级映射" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/30/mybatis-表高级映射/">mybatis--表高级映射</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/30/mybatis-表高级映射/">
+            <time datetime="2017-10-30T11:51:03.000Z" itemprop="datePublished">2017-10-30</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/mybatis/">mybatis</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="mybatis–表高级映射"><a href="#mybatis–表高级映射" class="headerlink" title="mybatis–表高级映射"></a>mybatis–表高级映射</h1><h2 id="一：订单商品数据模型"><a href="#一：订单商品数据模型" class="headerlink" title="一：订单商品数据模型"></a>一：订单商品数据模型</h2><p>1.商品表(items)：id，itemsname(商品名称)，price(商品定价)，detail(商品描述)，pic(商品图片)，createtime(生产日期)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+------------+-------------+--------+-------+-----------+----------------+</div><div class="line">| Field      | Type        | Null   | Key   |   Default | Extra          |</div><div class="line">|------------+-------------+--------+-------+-----------+----------------|</div><div class="line">| id         | int(11)     | NO     | PRI   |    &lt;null&gt; | auto_increment |</div><div class="line">| itemsname  | varchar(32) | NO     |       |    &lt;null&gt; |                |</div><div class="line">| price      | float(10,1) | NO     |       |    &lt;null&gt; |                |</div><div class="line">| detail     | text        | YES    |       |    &lt;null&gt; |                |</div><div class="line">| pic        | varchar(64) | YES    |       |    &lt;null&gt; |                |</div><div class="line">| createtime | datetime    | NO     |       |    &lt;null&gt; |                |</div><div class="line">+------------+-------------+--------+-------+-----------+----------------+</div></pre></td></tr></table></figure></p>
+<p>2.用户表(t_user)：id,username(用户名称),birthday(生日),sex(性别),address(地址)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+----------+--------------+--------+-------+-----------+----------------+</div><div class="line">| Field    | Type         | Null   | Key   |   Default | Extra          |</div><div class="line">|----------+--------------+--------+-------+-----------+----------------|</div><div class="line">| id       | int(11)      | NO     | PRI   |    &lt;null&gt; | auto_increment |</div><div class="line">| username | varchar(32)  | NO     |       |    &lt;null&gt; |                |</div><div class="line">| birthday | date         | YES    |       |    &lt;null&gt; |                |</div><div class="line">| sex      | char(1)      | YES    |       |    &lt;null&gt; |                |</div><div class="line">| address  | varchar(256) | YES    |       |    &lt;null&gt; |                |</div><div class="line">+----------+--------------+--------+-------+-----------+----------------+</div></pre></td></tr></table></figure></p>
+<p>3.订单表(orders)：id，user_id(下单用户id)，number(订单号)，createtime(创建订单时间)，note(备注)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+------------+--------------+--------+-------+-----------+----------------+</div><div class="line">| Field      | Type         | Null   | Key   |   Default | Extra          |</div><div class="line">|------------+--------------+--------+-------+-----------+----------------|</div><div class="line">| id         | int(11)      | NO     | PRI   |    &lt;null&gt; | auto_increment |</div><div class="line">| user_id    | int(11)      | NO     | MUL   |    &lt;null&gt; |                |</div><div class="line">| number     | varchar(30)  | NO     |       |    &lt;null&gt; |                |</div><div class="line">| createtime | datetime     | NO     |       |    &lt;null&gt; |                |</div><div class="line">| note       | varchar(100) | YES    |       |    &lt;null&gt; |                |</div><div class="line">+------------+--------------+--------+-------+-----------+----------------+</div></pre></td></tr></table></figure></p>
+<p>4.订单详情表(orderdetail)：id,orders_id(订单id),items_id(商品id),items_num(商品购买数量)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+-----------+---------+--------+-------+-----------+----------------+</div><div class="line">| Field     | Type    | Null   | Key   |   Default | Extra          |</div><div class="line">|-----------+---------+--------+-------+-----------+----------------|</div><div class="line">| id        | int(11) | NO     | PRI   |    &lt;null&gt; | auto_increment |</div><div class="line">| orders_id | int(11) | NO     | MUL   |    &lt;null&gt; |                |</div><div class="line">| items_id  | int(11) | NO     | MUL   |    &lt;null&gt; |                |</div><div class="line">| items_num | int(11) | YES    |       |    &lt;null&gt; |                |</div><div class="line">+-----------+---------+--------+-------+-----------+----------------+</div></pre></td></tr></table></figure></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/30/mybatis-表高级映射/" data-id="cj9iorda5000j0096lnvk41a7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/30/mybatis-表高级映射/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-redis-基础语法" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/30/redis-基础语法/">redis--基础语法</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/30/redis-基础语法/">
+            <time datetime="2017-10-30T02:39:27.000Z" itemprop="datePublished">2017-10-30</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="redis-基础语法"><a href="#redis-基础语法" class="headerlink" title="redis 基础语法"></a>redis 基础语法</h1><h2 id="redis-键-key"><a href="#redis-键-key" class="headerlink" title="redis 键(key)"></a>redis 键(key)</h2><p>DEL命令用于删除已存在的键。</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/30/redis-基础语法/" data-id="cj9iordad000m00965aiewuaf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/30/redis-基础语法/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-前端-grunt自动化构建" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/28/前端-grunt自动化构建/">前端--grunt自动化构建</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/28/前端-grunt自动化构建/">
+            <time datetime="2017-10-28T13:07:22.000Z" itemprop="datePublished">2017-10-28</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/前端/">前端</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="GRUNT-–-JavaScript-世界的构建工具"><a href="#GRUNT-–-JavaScript-世界的构建工具" class="headerlink" title="GRUNT – JavaScript 世界的构建工具"></a>GRUNT – JavaScript 世界的构建工具</h1><h2 id="为何要用构建工具？"><a href="#为何要用构建工具？" class="headerlink" title="为何要用构建工具？"></a>为何要用构建工具？</h2><blockquote>
+<p>一句话：自动化。对于需要反复重复的任务，例如压缩（minification）、编译、单元测试、linting等，自动化工具可以减轻你的劳动，简化你的工作。当你在 Gruntfile 文件正确配置好了任务，任务运行器就会自动帮你或你的小组完成大部分无聊的工作。—-grunt官网</p>
+</blockquote>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>使用grunt自动构建HTML项目，将stylus转化为浏览器可识别的css代码，并且支持项目的热更新。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1.nodejs环境</p>
+<p>2.npm管理工具</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">mkdir my-project</div><div class="line"><span class="built_in">cd</span>  my-project</div><div class="line"></div><div class="line">npm init</div><div class="line">npm install</div><div class="line">npm install -g grunt-cli</div><div class="line">npm install grunt --save-dev  //安装Grunt最新版本到项目目录中</div><div class="line">npm install grunt-contrib-connect --save-dev  //一个小型的服务器</div><div class="line">npm install grunt-contrib-stylus --save-dev //stylus编写styl输出css</div><div class="line">npm install grunt-contrib-watch --save-dev  //监视文件变动，做出相应动作</div></pre></td></tr></table></figure>
+<p>至此，所需依赖安装完毕。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>1.创建项目结构</p>
+<p>在项目根目录创建 <strong>app</strong> 文件夹，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">app/</div><div class="line">├── fonts/</div><div class="line">├── images/</div><div class="line">├── index.html</div><div class="line">├── scripts/</div><div class="line">├── style/</div><div class="line">│   └── style.css</div><div class="line">└── stylus/</div><div class="line">    └── example.styl</div></pre></td></tr></table></figure>
+<p>2.配置Gruntfile.js文件</p>
+<p>在项目根目录创建 <strong>Gruntfile.js</strong> 文件，其配置内容如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// 包装函数</span></div><div class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">grunt</span>) </span>&#123;</div><div class="line">  <span class="comment">// 任务配置,所有插件的配置信息</span></div><div class="line">  grunt.initConfig(&#123;</div><div class="line">    <span class="attr">pkg</span>: grunt.file.readJSON(<span class="string">'package.json'</span>),</div><div class="line">    <span class="attr">connect</span>: &#123;</div><div class="line">      <span class="attr">options</span>: &#123;</div><div class="line">        <span class="attr">port</span>: <span class="number">9000</span>,</div><div class="line">        <span class="attr">hostname</span>: <span class="string">'*'</span>, <span class="comment">//默认就是这个值，可配置为本机某个 IP，localhost 或域名</span></div><div class="line">        livereload: <span class="number">35729</span>  <span class="comment">//声明给 watch 监听的端口</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">server</span>: &#123;</div><div class="line">        <span class="attr">options</span>: &#123;</div><div class="line">          <span class="attr">open</span>: <span class="literal">true</span>, <span class="comment">//自动打开网页 http://</span></div><div class="line">          base: [</div><div class="line">            <span class="string">'app'</span>  <span class="comment">//主目录</span></div><div class="line">          ]</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">stylus</span>:&#123;</div><div class="line">      <span class="attr">compile</span>: &#123;</div><div class="line">        <span class="attr">options</span>: &#123;</div><div class="line">          <span class="attr">relativeDest</span>: <span class="string">'/'</span>, <span class="comment">//path to be joined and resolved with each file dest to get new one.</span></div><div class="line">          urlfunc: <span class="string">'data-uri'</span>, <span class="comment">// use data-uri('test.png') in our code to trigger Data URI embedding</span></div><div class="line">          linenos: <span class="literal">false</span>,</div><div class="line">          <span class="attr">compress</span>: <span class="literal">false</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">files</span>: &#123;</div><div class="line">          <span class="string">'app/style/style.css'</span>: <span class="string">'app/stylus/*.styl'</span>, <span class="comment">// 1:1 compile</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// watch插件的配置信息</span></div><div class="line">    watch: &#123;</div><div class="line">      <span class="attr">another</span>: &#123;</div><div class="line">        <span class="attr">tasks</span>: [<span class="string">'stylus'</span>],</div><div class="line">        <span class="attr">options</span>: &#123;</div><div class="line">            <span class="attr">livereload</span>: <span class="string">'&lt;%=connect.options.livereload%&gt;'</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">files</span>: [  <span class="comment">//下面文件的改变就会实时刷新网页</span></div><div class="line">          <span class="string">'app/*.html'</span>,</div><div class="line">          <span class="string">'app/stylus/&#123;,*/&#125;*.styl'</span>,</div><div class="line">          <span class="string">'app/scripts/&#123;,*/&#125;*.js'</span>,</div><div class="line">          <span class="string">'app/images/&#123;,*/&#125;*.&#123;png,jpg&#125;'</span>,</div><div class="line">          <span class="string">'app/fonts/&#123;,*/&#125;*.*'</span></div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  <span class="comment">// 告诉grunt我们将使用插件</span></div><div class="line">  grunt.loadNpmTasks(<span class="string">'grunt-contrib-watch'</span>);</div><div class="line">  grunt.loadNpmTasks(<span class="string">'grunt-contrib-stylus'</span>);</div><div class="line">  <span class="comment">//建立本地服务器</span></div><div class="line">  grunt.loadNpmTasks(<span class="string">'grunt-contrib-connect'</span>);</div><div class="line"></div><div class="line">  grunt.registerTask(<span class="string">'serve'</span>, [</div><div class="line">    <span class="string">'connect:server'</span>,</div><div class="line">    <span class="string">'watch'</span></div><div class="line">  ]);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3.启动项目"></a>3.启动项目</h2><p>在项目根目录输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grunt serve</div></pre></td></tr></table></figure>
+<p>项目成功启动，修改项目文件，浏览器中显示的内容也会随之改变。</p>
+<p>在app/stylus/文件夹下的所有*.styl文件的内容都将被编译到app/style/style.css文件中去。</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/28/前端-grunt自动化构建/" data-id="cj9iordap000q009621vc1kg3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/28/前端-grunt自动化构建/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-JAVA设计模式-合成-聚合复用原则" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/15/JAVA设计模式-合成-聚合复用原则/">JAVA设计模式-合成/聚合复用原则</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/15/JAVA设计模式-合成-聚合复用原则/">
+            <time datetime="2017-10-15T07:15:39.000Z" itemprop="datePublished">2017-10-15</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="JAVA设计模式-合成-聚合复用原则"><a href="#JAVA设计模式-合成-聚合复用原则" class="headerlink" title="JAVA设计模式-合成/聚合复用原则"></a>JAVA设计模式-合成/聚合复用原则</h1><p>转自：<a href="http://blog.csdn.net/u010832572/article/details/45007933" target="_blank" rel="external">http://blog.csdn.net/u010832572/article/details/45007933</a></p>
+<h2 id="一、什么是合成-聚合复用原则？"><a href="#一、什么是合成-聚合复用原则？" class="headerlink" title="一、什么是合成/聚合复用原则？"></a>一、什么是合成/聚合复用原则？</h2><p>合成/聚合复用原则是 <strong>在一个新的对象里面使用一些已有的对象，使之成为新对象的一部分</strong>；新的对象通过向这些对象的 <strong>委派</strong> 达到复用已有功能的目的。</p>
+<p>简述为：<strong>要尽量使用合成/聚合，尽量不要使用继承</strong>。</p>
+<h2 id="二、合成和聚合的区别；依赖和关联"><a href="#二、合成和聚合的区别；依赖和关联" class="headerlink" title="二、合成和聚合的区别；依赖和关联"></a>二、合成和聚合的区别；依赖和关联</h2><p>合成(Composition)和聚合(Aggregation)都是关联(Association)的特殊种类。用C语言来讲，合成是 <strong>值的聚合</strong>(Aggregation by Value)，聚合是则是 <strong>引用的聚合</strong>(Aggregation by Reference)。</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/15/JAVA设计模式-合成-聚合复用原则/" data-id="cj9iord7v000500964xzlpw4p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/15/JAVA设计模式-合成-聚合复用原则/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-JAVA-23种设计模式" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/15/JAVA-23种设计模式/">JAVA-23种设计模式</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/15/JAVA-23种设计模式/">
+            <time datetime="2017-10-15T06:34:27.000Z" itemprop="datePublished">2017-10-15</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Java，设计模式/">Java，设计模式</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="JAVA-23种设计模式"><a href="#JAVA-23种设计模式" class="headerlink" title="JAVA-23种设计模式"></a>JAVA-23种设计模式</h1><p>转自： <a href="http://blog.csdn.net/zhangerqing/article/details/8194653" target="_blank" rel="external">http://blog.csdn.net/zhangerqing/article/details/8194653</a></p>
+<h2 id="一、设计模式"><a href="#一、设计模式" class="headerlink" title="一、设计模式"></a>一、设计模式</h2><p>设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
+<h2 id="二、设计模式的分类"><a href="#二、设计模式的分类" class="headerlink" title="二、设计模式的分类"></a>二、设计模式的分类</h2><p>总体来说设计模式分为三大类：</p>
+<p><strong>创建型</strong> 模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
+<p><strong>结构型</strong> 模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。</p>
+<p><strong>行为型</strong> 模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+<p>其实还有两类：<strong>并发型</strong> 模式和 <strong>线程池</strong> 模式。用一个图片来整体描述一下：</p>
+<p><img src="../../static/images/1354152786_2930.jpg" alt="Alt text"></p>
+<h2 id="三、设计模式的六大原则"><a href="#三、设计模式的六大原则" class="headerlink" title="三、设计模式的六大原则"></a>三、设计模式的六大原则</h2><h3 id="1-开闭原则（Open-Close-Principle）"><a href="#1-开闭原则（Open-Close-Principle）" class="headerlink" title="1.开闭原则（Open Close Principle）"></a>1.开闭原则（Open Close Principle）</h3><p>开闭原则就是说对 <strong>扩展开放</strong>，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个 <strong>热插拔</strong> 的效果。所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p>
+<h3 id="2-里氏代换原则（Liskov-Substitution-Principle）"><a href="#2-里氏代换原则（Liskov-Substitution-Principle）" class="headerlink" title="2.里氏代换原则（Liskov Substitution Principle）"></a>2.里氏代换原则（Liskov Substitution Principle）</h3><p>里氏代换原则(Liskov Substitution Principle LSP)面向对象设计的基本原则之一。 里氏代换原则中说，<strong>任何基类可以出现的地方，子类一定可以出现</strong>。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。里氏代换原则是对“开-闭”原则的补充。实现“开-闭”原则的关键步骤就是 <strong>抽象化</strong>。而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。—— From Baidu 百科</p>
+<h3 id="3-依赖倒转原则（Dependence-Inversion-Principle）"><a href="#3-依赖倒转原则（Dependence-Inversion-Principle）" class="headerlink" title="3.依赖倒转原则（Dependence Inversion Principle）"></a>3.依赖倒转原则（Dependence Inversion Principle）</h3><p>这个是开闭原则的基础，具体内容：<strong>真对接口编程，依赖于抽象而不依赖于具体</strong>。</p>
+<h3 id="4-接口隔离原则（Interface-Segregation-Principle）"><a href="#4-接口隔离原则（Interface-Segregation-Principle）" class="headerlink" title="4.接口隔离原则（Interface Segregation Principle）"></a>4.接口隔离原则（Interface Segregation Principle）</h3><p>这个原则的意思是：<strong>使用多个隔离的接口，比使用单个接口要好</strong>。还是一个降低类之间的耦合度的意思，从这儿我们看出，其实设计模式就是一个软件的设计思想，从大型软件架构出发，为了升级和维护方便。所以上文中多次出现：降低依赖，降低耦合。</p>
+<h3 id="5-迪米特法则（最少知道原则）（Demeter-Principle）"><a href="#5-迪米特法则（最少知道原则）（Demeter-Principle）" class="headerlink" title="5.迪米特法则（最少知道原则）（Demeter Principle）"></a>5.迪米特法则（最少知道原则）（Demeter Principle）</h3><p>为什么叫最少知道原则，就是说：<strong>一个实体应当尽量少的与其他实体之间发生相互作用</strong>，使得系统功能模块相对独立。</p>
+<h3 id="6-合成复用原则（Composite-Reuse-Principle）"><a href="#6-合成复用原则（Composite-Reuse-Principle）" class="headerlink" title="6.合成复用原则（Composite Reuse Principle）"></a>6.合成复用原则（Composite Reuse Principle）</h3><p>原则是尽量使用 <strong><a href="https://yangdon.github.io/#" title="合成/聚合">合成/聚合</a></strong> 的方式，而不是使用继承。</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/15/JAVA-23种设计模式/" data-id="cj9iord7f000100968dxzbx71" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/15/JAVA-23种设计模式/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-JAVA设计模式-单例模式" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/15/JAVA设计模式-单例模式/">JAVA设计模式-单例模式</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/15/JAVA设计模式-单例模式/">
+            <time datetime="2017-10-15T06:30:59.000Z" itemprop="datePublished">2017-10-15</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/java-设计模式/">java,设计模式</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="JAVA设计模式-单例模式"><a href="#JAVA设计模式-单例模式" class="headerlink" title="JAVA设计模式-单例模式"></a>JAVA设计模式-单例模式</h1>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/15/JAVA设计模式-单例模式/" data-id="cj9iord7t000400969whqrdie" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/15/JAVA设计模式-单例模式/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Java1-8新特性-Collectors" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/13/Java1-8新特性-Collectors/">Java1.8新特性--Collectors</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/13/Java1-8新特性-Collectors/">
+            <time datetime="2017-10-13T12:05:30.000Z" itemprop="datePublished">2017-10-13</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/java/">java</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="Java1-8新特性–Collector"><a href="#Java1-8新特性–Collector" class="headerlink" title="Java1.8新特性–Collector"></a>Java1.8新特性–Collector</h1><p>转自 <a href="http://blog.csdn.net/u013291394/article/details/52662761" target="_blank" rel="external">http://blog.csdn.net/u013291394/article/details/52662761</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">java.util.stream</div><div class="line"></div><div class="line">Interface Collector&lt;T,A,R&gt;</div><div class="line"></div><div class="line">参数类型</div><div class="line">T - T的输入元素的类型</div><div class="line">A - A的可变累积类型（通常作为实现细节隐藏）</div><div class="line">R - R的结果类型</div></pre></td></tr></table></figure>
+<h3 id="collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。"><a href="#collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。" class="headerlink" title="collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。"></a>collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。</h3><p>你可以使用collect达到以下目的：</p>
+<p><strong>将数据流缩减为一个单一值：</strong> 一个流执行后的结果能够被缩减为一个单一的值。单一的值可以是一个Collection，或者像int、double等的数值，再或者是一个用户自定义的值对象。</p>
+<p><strong>将一个数据流中的元素进行分组：</strong> 根据任务类型将流中所有的任务进行分组。这将产生一个Map<tasktype, list<task="">&gt;的结果，其中每个实体包含一个任务类型以及与它相关的任务。你也可以使用除了列表以外的任何其他的集合。如果你不需要与一任务类型相关的所有的任务，你可以选择产生一个Map<tasktype, task="">。这是一个能够根据任务类型对任务进行分类并获取每类任务中第一个任务的例子。</tasktype,></tasktype,></p>
+<p><strong>分割一个流中的元素：</strong> 你可以将一个流分割为两组——比如将任务分割为要做和已经做完的任务。</p>
+<h3 id="Collector实际应用"><a href="#Collector实际应用" class="headerlink" title="Collector实际应用:"></a>Collector实际应用:</h3><p>在Java8中，我们可以通过编写如下的代码达到将任务根据类型分组的目的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;TaskType, List&lt;Task&gt;&gt; groupTasksByType(List&lt;Task&gt; tasks) &#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().collect(Collectors.groupingBy(task -&gt; task.getType()));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面的代码使用了定义在辅助类Collectors中的groupingBy收集器。它创建了一个映射，其中TaskType是它的键，而包含了所有拥有相同TaskType的任务的列表是它的值。为了在Java7中达到相同的效果，你需要编写如下的代码。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    List&lt;Task&gt; tasks = getTasks();</div><div class="line">    Map&lt;TaskType, List&lt;Task&gt;&gt; allTasksByType = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (Task task : tasks) &#123;</div><div class="line">        List&lt;Task&gt; existingTasksByType = allTasksByType.get(task.getType());</div><div class="line">        <span class="keyword">if</span> (existingTasksByType == <span class="keyword">null</span>) &#123;</div><div class="line">            List&lt;Task&gt; tasksByType = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">            tasksByType.add(task);</div><div class="line">            allTasksByType.put(task.getType(), tasksByType);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            existingTasksByType.add(task);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (Map.Entry&lt;TaskType, List&lt;Task&gt;&gt; entry : allTasksByType.entrySet()) &#123;</div><div class="line">        System.out.println(String.format(<span class="string">"%s =&gt;&gt; %s"</span>, entry.getKey(), entry.getValue()));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="收集器：常用的规约操作"><a href="#收集器：常用的规约操作" class="headerlink" title="收集器：常用的规约操作"></a>收集器：常用的规约操作</h3><p>Collectors辅助类提供了大量的静态辅助方法来创建收集器为常见的使用场景服务，像将元素收集到一个集合中、分组和分割元素，或者根据不同的标准来概述元素。我们将在这篇博文中涵盖大部分常见的Collector。</p>
+<h3 id="缩减为一个值"><a href="#缩减为一个值" class="headerlink" title="缩减为一个值"></a>缩减为一个值</h3><p>收集器可以被用来收集流的输出到一个集合，或者产生一个单一的值。</p>
+<h4 id="将数据收集进一个列表"><a href="#将数据收集进一个列表" class="headerlink" title="将数据收集进一个列表:"></a>将数据收集进一个列表:</h4><p>让我们编写我们的第一个测试用例——给定一个任务列表，我们想将他们的标题收集进一个列表。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.util.stream.Collectors.toList;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example2_ReduceValue</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">allTitles</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> tasks.stream().map(Task::getTitle).collect(toList());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>toList收集器使用了列表的add方法来向结果列表中添加元素。toList收集器使用了ArrayList作为列表的实现。</p>
+<h4 id="将数据收集进一个集合"><a href="#将数据收集进一个集合" class="headerlink" title="将数据收集进一个集合"></a>将数据收集进一个集合</h4><p>如果我们想要确保返回的标题都是唯一的，并且我们不在乎元素的顺序，那么我们可以使用toSet收集器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.util.stream.Collectors.toSet;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> Set&lt;String&gt; <span class="title">uniqueTitles</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().map(Task::getTitle).collect(toSet());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>toSet方法使用了HashSet作为集合的实现来存储结果集。</p>
+<h4 id="将数据收集进一个映射"><a href="#将数据收集进一个映射" class="headerlink" title="将数据收集进一个映射"></a>将数据收集进一个映射</h4><p>你可以使用toMap收集器将一个流转换为一个映射。toMap收集器需要两个映射方法来获得映射的键和值。在下面展示的代码中，Task::getTitle是接收一个任务并产生一个只包含该任务标题的键的Function。task -&gt; task是一个用来返回任务本身的lambda表达式。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.util.function.Function.identity;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Task&gt; <span class="title">taskMap</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> tasks.stream().collect(toMap(Task::getTitle, identity()));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>从一个流中创建映射的代码会在存在重复的键时抛出异常。你将会得到一个类似下面的错误。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Exception in thread <span class="string">"main"</span> java.lang.IllegalStateException: Duplicate key Task&#123;title=<span class="string">'Read Version Control with Git book'</span>, type=READING&#125;</div><div class="line">at java.util.stream.Collectors.lambda$throwingMerger$<span class="number">105</span>(Collectors.java:<span class="number">133</span>)</div></pre></td></tr></table></figure>
+<p>你可以通过使用toMap方法的另一个变体来处理重复问题，它允许我们指定一个合并方法。这个合并方法允许用户他们指定想如何处理多个值关联到同一个键的冲突。在下面展示的代码中，我们只是使用了新的值，当然你也可以编写一个智能的算法来处理冲突。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Task&gt; <span class="title">taskMap_duplicates</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> tasks.stream().collect(toMap(Task::getTitle, identity(), (t1, t2) -&gt; t2));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>你可以通过使用toMap方法的第三个变体来指定其他的映射实现。这需要你指定将用来存储结果的Map和Supplier。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Task&gt; <span class="title">collectToMap</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().collect(toMap(Task::getTitle, identity(), (t1, t2) -&gt; t2, LinkedHashMap::<span class="keyword">new</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>类似于toMap收集器，也有toConcurrentMap收集器，它产生一个ConcurrentMap而不是HashMap。</p>
+<h3 id="使用其它的收集器"><a href="#使用其它的收集器" class="headerlink" title="使用其它的收集器"></a>使用其它的收集器</h3><p>像toList和toSet这类特定的收集器不允许你指定内部的列表或者集合实现。当你想要将结果收集到其它类型的集合中时，你可以像下面这样使用toCollection收集器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> LinkedHashSet&lt;Task&gt; <span class="title">collectToLinkedHaskSet</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> tasks.stream().collect(toCollection(LinkedHashSet::<span class="keyword">new</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="找到拥有最长标题的任务"><a href="#找到拥有最长标题的任务" class="headerlink" title="找到拥有最长标题的任务"></a>找到拥有最长标题的任务</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Task <span class="title">taskWithLongestTitle</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().collect(collectingAndThen(maxBy((t1, t2) -&gt; t1.getTitle().length() - t2.getTitle().length()), Optional::get));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="统计标签的总数"><a href="#统计标签的总数" class="headerlink" title="统计标签的总数"></a>统计标签的总数</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">totalTagCount</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().collect(summingInt(task -&gt; task.getTags().size()));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="生成任务标题的概述"><a href="#生成任务标题的概述" class="headerlink" title="生成任务标题的概述"></a>生成任务标题的概述</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">titleSummary</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().map(Task::getTitle).collect(joining(<span class="string">";"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="分类收集器"><a href="#分类收集器" class="headerlink" title="分类收集器"></a>分类收集器</h3><p>收集器最常见的使用场景之一是对元素进行分类。让我来看一下不同的例子来理解我们如何进行分类。</p>
+<h4 id="例子1：根据类型对任务分类"><a href="#例子1：根据类型对任务分类" class="headerlink" title="例子1：根据类型对任务分类"></a>例子1：根据类型对任务分类</h4><p>我们看一下下面展示的例子，我们想要根据TaskType来对所有的任务进行分类。我们可以通过使用Collectors辅助类中的groupingBy方法来轻易地进行该项任务。你可以通过使用方法引用和静态导入来使它更加高效。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.util.stream.Collectors.groupingBy;</div><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;TaskType, List&lt;Task&gt;&gt; groupTasksByType(List&lt;Task&gt; tasks) &#123;</div><div class="line">       <span class="keyword">return</span> tasks.stream().collect(groupingBy(Task::getType));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>它将会产生如下的输出。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;CODING=[Task&#123;title=<span class="string">'Write a mobile application to store my tasks'</span>, type=CODING, createdOn=<span class="number">2015</span>-<span class="number">07</span>-<span class="number">03</span>&#125;], WRITING=[Task&#123;title=<span class="string">'Write a blog on Java 8 Streams'</span>, type=WRITING, createdOn=<span class="number">2015</span>-<span class="number">07</span>-<span class="number">04</span>&#125;], READING=[Task&#123;title=<span class="string">'Read Version Control with Git book'</span>, type=READING, createdOn=<span class="number">2015</span>-<span class="number">07</span>-<span class="number">01</span>&#125;, Task&#123;title=<span class="string">'Read Java 8 Lambdas book'</span>, type=READING, createdOn=<span class="number">2015</span>-<span class="number">07</span>-<span class="number">02</span>&#125;, Task&#123;title=<span class="string">'Read Domain Driven Design book'</span>, type=READING, createdOn=<span class="number">2015</span>-<span class="number">07</span>-<span class="number">05</span>&#125;]&#125;</div></pre></td></tr></table></figure>
+<h4 id="例子2：根据标签分类"><a href="#例子2：根据标签分类" class="headerlink" title="例子2：根据标签分类"></a>例子2：根据标签分类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, List&lt;Task&gt;&gt; groupingByTag(List&lt;Task&gt; tasks) &#123;</div><div class="line">        <span class="keyword">return</span> tasks.stream().</div><div class="line">                        flatMap(task -&gt; task.getTags().stream().map(tag -&gt; <span class="keyword">new</span> TaskTag(tag, task))).</div><div class="line">                        collect(groupingBy(TaskTag::getTag, mapping(TaskTag::getTask,toList())));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskTag</span> </span>&#123;</div><div class="line">    <span class="keyword">final</span> String tag;</div><div class="line">    <span class="keyword">final</span> Task task;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TaskTag</span><span class="params">(String tag, Task task)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.tag = tag;</div><div class="line">        <span class="keyword">this</span>.task = task;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTag</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> tag;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> Task <span class="title">getTask</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> task;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="例子3：根据标签和数量对任务分类"><a href="#例子3：根据标签和数量对任务分类" class="headerlink" title="例子3：根据标签和数量对任务分类"></a>例子3：根据标签和数量对任务分类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Long&gt; <span class="title">tagsAndCount</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> tasks.stream().</div><div class="line">        flatMap(task -&gt; task.getTags().stream().map(tag -&gt; <span class="keyword">new</span> TaskTag(tag, task))).</div><div class="line">        collect(groupingBy(TaskTag::getTag, counting()));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子4：根据任务类型和创建日期分类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;TaskType, Map&lt;LocalDate, List&lt;Task&gt;&gt;&gt; groupTasksByTypeAndCreationDate(List&lt;Task&gt; tasks) &#123;</div><div class="line">        <span class="keyword">return</span> tasks.stream().collect(groupingBy(Task::getType, groupingBy(Task::getCreatedOn)));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h3><p>很多时候你想根据一个断言来将一个数据集分割成两个数据集。举例来说，我们可以通过定义一个将任务分割为两组的分割方法来将任务分割成两组，一组是在今天之前已经到期的，另一组是其他的任务。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;Boolean, List&lt;Task&gt;&gt; partitionOldAndFutureTasks(List&lt;Task&gt; tasks) &#123;</div><div class="line">  <span class="keyword">return</span> tasks.stream().collect(partitioningBy(task -&gt; task.getDueOn().isAfter(LocalDate.now())));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="生成统计信息"><a href="#生成统计信息" class="headerlink" title="生成统计信息"></a>生成统计信息</h3><p>另一组非常有用的收集器是用来产生统计信息的收集器。这能够在像int、double和long这样的原始数据类型上起到作用；并且能被用来生成像下面这样的统计信息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">IntSummaryStatistics summaryStatistics = tasks.stream().map(Task::getTitle).collect(summarizingInt(String::length));</div><div class="line">System.out.println(summaryStatistics.getAverage()); <span class="comment">//32.4</span></div><div class="line">System.out.println(summaryStatistics.getCount()); <span class="comment">//5</span></div><div class="line">System.out.println(summaryStatistics.getMax()); <span class="comment">//44</span></div><div class="line">System.out.println(summaryStatistics.getMin()); <span class="comment">//24</span></div><div class="line">System.out.println(summaryStatistics.getSum()); <span class="comment">//162</span></div></pre></td></tr></table></figure>
+<p>也有其它的变种形式，像针对其它原生类型的LongSummaryStatistics和DoubleSummaryStatistics。</p>
+<p>你也可以通过使用combine操作来将一个IntSummaryStatistics与另一个组合起来。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">firstSummaryStatistics.combine(secondSummaryStatistics);</div><div class="line">System.out.println(firstSummaryStatistics)</div></pre></td></tr></table></figure>
+<h3 id="连接所有的标题"><a href="#连接所有的标题" class="headerlink" title="连接所有的标题"></a>连接所有的标题</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">allTitles</span><span class="params">(List&lt;Task&gt; tasks)</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> tasks.stream().map(Task::getTitle).collect(joining(<span class="string">", "</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="编写一个定制的收集器"><a href="#编写一个定制的收集器" class="headerlink" title="编写一个定制的收集器"></a>编写一个定制的收集器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.google.common.collect.HashMultiset;</div><div class="line"><span class="keyword">import</span> com.google.common.collect.Multiset;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Collections;</div><div class="line"><span class="keyword">import</span> java.util.EnumSet;</div><div class="line"><span class="keyword">import</span> java.util.Set;</div><div class="line"><span class="keyword">import</span> java.util.function.BiConsumer;</div><div class="line"><span class="keyword">import</span> java.util.function.BinaryOperator;</div><div class="line"><span class="keyword">import</span> java.util.function.Function;</div><div class="line"><span class="keyword">import</span> java.util.function.Supplier;</div><div class="line"><span class="keyword">import</span> java.util.stream.Collector;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MultisetCollector</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Collector</span>&lt;<span class="title">T</span>, <span class="title">Multiset</span>&lt;<span class="title">T</span>&gt;, <span class="title">Multiset</span>&lt;<span class="title">T</span>&gt;&gt; </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">public</span> Supplier&lt;Multiset&lt;T&gt;&gt; supplier() &#123;</div><div class="line">        <span class="keyword">return</span> HashMultiset::create;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">public</span> BiConsumer&lt;Multiset&lt;T&gt;, T&gt; accumulator() &#123;</div><div class="line">        <span class="keyword">return</span> (set, e) -&gt; set.add(e, <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">public</span> BinaryOperator&lt;Multiset&lt;T&gt;&gt; combiner() &#123;</div><div class="line">        <span class="keyword">return</span> (set1, set2) -&gt; &#123;</div><div class="line">            set1.addAll(set2);</div><div class="line">            <span class="keyword">return</span> set1;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">public</span> Function&lt;Multiset&lt;T&gt;, Multiset&lt;T&gt;&gt; finisher() &#123;</div><div class="line">        <span class="keyword">return</span> Function.identity();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Set&lt;Characteristics&gt; <span class="title">characteristics</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> Collections.unmodifiableSet(EnumSet.of(Characteristics.IDENTITY_FINISH));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.google.common.collect.Multiset;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MultisetCollectorExample</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        List&lt;String&gt; names = Arrays.asList(<span class="string">"shekhar"</span>, <span class="string">"rahul"</span>, <span class="string">"shekhar"</span>);</div><div class="line">        Multiset&lt;String&gt; set = names.stream().collect(<span class="keyword">new</span> MultisetCollector&lt;&gt;());</div><div class="line"></div><div class="line">        set.forEach(str -&gt; System.out.println(str + <span class="string">":"</span> + set.count(str)));</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Java8中的字数统计"><a href="#Java8中的字数统计" class="headerlink" title="Java8中的字数统计"></a>Java8中的字数统计</h3><p>我们将通过使用流和收集器在Java8中编写有名的字数统计样例来结束这一节。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">wordCount</span><span class="params">(Path path)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">    Map&lt;String, Long&gt; wordCount = Files.lines(path)</div><div class="line">            .parallel()</div><div class="line">            .flatMap(line -&gt; Arrays.stream(line.trim().split(<span class="string">"\\s"</span>)))</div><div class="line">            .map(word -&gt; word.replaceAll(<span class="string">"[^a-zA-Z]"</span>, <span class="string">""</span>).toLowerCase().trim())</div><div class="line">            .filter(word -&gt; word.length() &gt; <span class="number">0</span>)</div><div class="line">            .map(word -&gt; <span class="keyword">new</span> SimpleEntry&lt;&gt;(word, <span class="number">1</span>))</div><div class="line">            .collect(groupingBy(SimpleEntry::getKey, counting()));</div><div class="line">    wordCount.forEach((k, v) -&gt; System.out.println(String.format(<span class="string">"%s ==&gt;&gt; %d"</span>, k, v)));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/13/Java1-8新特性-Collectors/" data-id="cj9iord99000b0096o8q7zbf8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/13/Java1-8新特性-Collectors/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Springboot-之-静态资源路径配置" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/11/Springboot-之-静态资源路径配置/">Springboot 之 静态资源路径配置</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/11/Springboot-之-静态资源路径配置/">
+            <time datetime="2017-10-11T11:30:48.000Z" itemprop="datePublished">2017-10-11</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Springboot/">Springboot</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p><strong>静态资源路径</strong> 是指系统可以直接访问的路径，且路径下的所有文件均可被用户直接读取。</p>
+<p>在Springboot中默认的静态资源路径有：classpath:/META-INF/resources/，classpath:/resources/，classpath:/static/，classpath:/public/，从这里可以看出这里的静态资源路径都是在classpath中（也就是在项目路径下指定的这几个文件夹）</p>
+<p>试想这样一种情况：一个网站有文件上传文件的功能，如果被上传的文件放在上述的那些文件夹中会有怎样的后果？</p>
+<ul>
+<li>网站数据与程序代码不能有效分离；</li>
+<li>当项目被打包成一个.jar文件部署时，再将上传的文件放到这个.jar文件中是有多么低的效率；</li>
+<li>网站数据的备份将会很痛苦。</li>
+</ul>
+<p>此时可能最佳的解决办法是将静态资源路径设置到磁盘的基本个目录。</p></p>
+            <p class="article-more-link">
+                <a href="/2017/10/11/Springboot-之-静态资源路径配置/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yangdon.github.io/2017/10/11/Springboot-之-静态资源路径配置/" data-id="cj9iord9t000e0096toxcjunp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://yangdon.github.io/2017/10/11/Springboot-之-静态资源路径配置/#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+    </nav>
 </section>
             
                 <aside id="sidebar">
@@ -339,7 +1570,7 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/08/08/JAVA-JNI基础/" class="thumbnail">
+                            <a href="/2017/11/01/redis-redis安装与配置/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -350,8 +1581,84 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/08/08/JAVA-JNI基础/" class="title">JAVA--JNI基础</a></p>
-                            <p class="item-date"><time datetime="2017-08-08T11:55:51.000Z" itemprop="datePublished">2017-08-08</time></p>
+                            <p class="item-title"><a href="/2017/11/01/redis-redis安装与配置/" class="title">redis--redis安装与配置</a></p>
+                            <p class="item-date"><time datetime="2017-11-01T13:49:42.000Z" itemprop="datePublished">2017-11-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/11/01/java-jedis配置/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/11/01/java-jedis配置/" class="title">java--jedis配置</a></p>
+                            <p class="item-date"><time datetime="2017-11-01T13:03:05.000Z" itemprop="datePublished">2017-11-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/30/mybatis-表高级映射/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/10/30/mybatis-表高级映射/" class="title">mybatis--表高级映射</a></p>
+                            <p class="item-date"><time datetime="2017-10-30T11:51:03.000Z" itemprop="datePublished">2017-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/30/redis-基础语法/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/10/30/redis-基础语法/" class="title">redis--基础语法</a></p>
+                            <p class="item-date"><time datetime="2017-10-30T02:39:27.000Z" itemprop="datePublished">2017-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/28/前端-grunt自动化构建/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/10/28/前端-grunt自动化构建/" class="title">前端--grunt自动化构建</a></p>
+                            <p class="item-date"><time datetime="2017-10-28T13:07:22.000Z" itemprop="datePublished">2017-10-28</time></p>
                         </div>
                     </li>
                 
@@ -366,7 +1673,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -375,7 +1682,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/jni/">jni</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java，设计模式/">Java，设计模式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/">Springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-jedis/">java jedis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-设计模式/">java,设计模式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jni/">jni</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mybatis/">mybatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shiro/">shiro</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -384,7 +1691,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/jni/" style="font-size: 10px;">jni</a>
+            <a href="/tags/Java，设计模式/" style="font-size: 10px;">Java，设计模式</a> <a href="/tags/Springboot/" style="font-size: 10px;">Springboot</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java-jedis/" style="font-size: 10px;">java jedis</a> <a href="/tags/java-设计模式/" style="font-size: 10px;">java,设计模式</a> <a href="/tags/jni/" style="font-size: 10px;">jni</a> <a href="/tags/mybatis/" style="font-size: 10px;">mybatis</a> <a href="/tags/shiro/" style="font-size: 10px;">shiro</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
         </div>
     </div>
 
