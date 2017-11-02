@@ -15,7 +15,7 @@ JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java
 <meta property="og:description" content="JNI概述JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。
 JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持J">
 <meta property="og:image" content="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif">
-<meta property="og:updated_time" content="2017-08-08T16:31:05.786Z">
+<meta property="og:updated_time" content="2017-11-02T16:32:40.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA--JNI基础">
 <meta name="twitter:description" content="JNI概述JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。
@@ -241,6 +241,7 @@ var _hmt = _hmt || [];
 <li>执行运行时类型检查。</li>
 </ul>
 <p>您还可以使用JNI与Invocation API来启用任意本地应用程序来嵌入Java VM。这使得程序员可以轻松地使其现有应用程序启用Java，而无需与VM源代码链接。</p>
+<a id="more"></a>
 <h2 id="JNI接口指针"><a href="#JNI接口指针" class="headerlink" title="JNI接口指针"></a>JNI接口指针</h2><p>本地代码(Native code)通过调用JNI函数来访问Java VM功能。JNI函数可通过接口指针获得。接口指针是指向指针的指针。指针指向一个指针数组，每个指针指向一个接口函数。每个接口函数都在数组内的一个预定义的偏移量。</p>
 <p>JNI接口指针：</p>
 <p><img src="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif" alt="Alt text"></p>
@@ -257,7 +258,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/" data-id="cj9iord7l000200964inqo05o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2017/08/08/JAVA-JNI基础/" data-id="cj9ioxqpf0001ck9695h82cho" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

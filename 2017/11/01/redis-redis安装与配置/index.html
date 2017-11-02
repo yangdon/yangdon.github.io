@@ -22,7 +22,7 @@
 1234tar -zxvf redis-x.x.x.tar.gzcd redis-x.x.xmakemake install
 配置redis.config文件：
 123sudo mkdir">
-<meta property="og:updated_time" content="2017-11-01T14:13:47.573Z">
+<meta property="og:updated_time" content="2017-11-02T16:33:44.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis--redis安装与配置">
 <meta name="twitter:description" content="redis–redis安装与配置一、redis安装获取redis最新的安装包：
@@ -241,6 +241,7 @@ var _hmt = _hmt || [];
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar -zxvf redis-x.x.x.tar.gz</div><div class="line"><span class="built_in">cd</span> redis-x.x.x</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
 <p>配置redis.config文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /etc/redis</div><div class="line">sudo cp ./redis.config /etc/redis/6379.config</div><div class="line">sudo vim /etc/redis/6379.config</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>6379.config只需作如下内容的修改:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># By default Redis does not run as a daemon. Use &apos;yes&apos; if you need it.</div><div class="line"># Note that Redis will write a pid file in /var/run/redis.pid when daemonized.</div><div class="line">daemonize yes                 # 将daemonize属性改为yes（表明需要在后台运行）(136行附近)</div><div class="line"></div><div class="line"># Note that you must specify a directory here, not a file name.</div><div class="line">dir /usr/local/redis/data     # 设置dump.rdb文件的存储路径(263行附近)</div><div class="line"></div><div class="line"># requirepass foobared</div><div class="line">requirepass root123           # 设置redis的密码(500行附近)</div></pre></td></tr></table></figure>
 <p>添加dump.rdb文件的存储路径：</p>
@@ -266,7 +267,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/" data-id="cj9iorda9000l00963z7d8yo2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2017/11/01/redis-redis安装与配置/" data-id="cj9ioxqq7000kck96w90cikrl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

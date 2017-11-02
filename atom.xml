@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangdon.github.io/"/>
-  <updated>2017-11-01T14:13:47.573Z</updated>
+  <updated>2017-11-02T16:33:44.616Z</updated>
   <id>https://yangdon.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://yangdon.github.io/2017/11/01/redis-redis%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
     <id>https://yangdon.github.io/2017/11/01/redis-redis安装与配置/</id>
     <published>2017-11-01T13:49:42.000Z</published>
-    <updated>2017-11-01T14:13:47.573Z</updated>
+    <updated>2017-11-02T16:33:44.616Z</updated>
     
     <content type="html"><![CDATA[<h1 id="redis–redis安装与配置"><a href="#redis–redis安装与配置" class="headerlink" title="redis–redis安装与配置"></a>redis–redis安装与配置</h1><h2 id="一、redis安装"><a href="#一、redis安装" class="headerlink" title="一、redis安装"></a>一、redis安装</h2><p>获取redis最新的安装包：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-x.x.x.tar.gz</div></pre></td></tr></table></figure>
@@ -28,6 +28,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar -zxvf redis-x.x.x.tar.gz</div><div class="line"><span class="built_in">cd</span> redis-x.x.x</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
 <p>配置redis.config文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /etc/redis</div><div class="line">sudo cp ./redis.config /etc/redis/6379.config</div><div class="line">sudo vim /etc/redis/6379.config</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>6379.config只需作如下内容的修改:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># By default Redis does not run as a daemon. Use &apos;yes&apos; if you need it.</div><div class="line"># Note that Redis will write a pid file in /var/run/redis.pid when daemonized.</div><div class="line">daemonize yes                 # 将daemonize属性改为yes（表明需要在后台运行）(136行附近)</div><div class="line"></div><div class="line"># Note that you must specify a directory here, not a file name.</div><div class="line">dir /usr/local/redis/data     # 设置dump.rdb文件的存储路径(263行附近)</div><div class="line"></div><div class="line"># requirepass foobared</div><div class="line">requirepass root123           # 设置redis的密码(500行附近)</div></pre></td></tr></table></figure>
 <p>添加dump.rdb文件的存储路径：</p>
@@ -47,7 +48,12 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;redis–redis安装与配置&quot;&gt;&lt;a href=&quot;#redis–redis安装与配置&quot; class=&quot;headerlink&quot; title=&quot;redis–redis安装与配置&quot;&gt;&lt;/a&gt;redis–redis安装与配置&lt;/h1&gt;&lt;h2 id=&quot;一、redis安装
+      &lt;h1 id=&quot;redis–redis安装与配置&quot;&gt;&lt;a href=&quot;#redis–redis安装与配置&quot; class=&quot;headerlink&quot; title=&quot;redis–redis安装与配置&quot;&gt;&lt;/a&gt;redis–redis安装与配置&lt;/h1&gt;&lt;h2 id=&quot;一、redis安装&quot;&gt;&lt;a href=&quot;#一、redis安装&quot; class=&quot;headerlink&quot; title=&quot;一、redis安装&quot;&gt;&lt;/a&gt;一、redis安装&lt;/h2&gt;&lt;p&gt;获取redis最新的安装包：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;wget http://download.redis.io/releases/redis-x.x.x.tar.gz&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;开始安装：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;tar -zxvf redis-x.x.x.tar.gz&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; redis-x.x.x&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;make&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;make install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;配置redis.config文件：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo mkdir /etc/redis&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo cp ./redis.config /etc/redis/6379.config&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo vim /etc/redis/6379.config&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -122,7 +128,7 @@
     <link href="https://yangdon.github.io/2017/10/28/%E5%89%8D%E7%AB%AF-grunt%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/"/>
     <id>https://yangdon.github.io/2017/10/28/前端-grunt自动化构建/</id>
     <published>2017-10-28T13:07:22.000Z</published>
-    <updated>2017-10-28T13:48:14.748Z</updated>
+    <updated>2017-11-02T16:32:04.203Z</updated>
     
     <content type="html"><![CDATA[<h1 id="GRUNT-–-JavaScript-世界的构建工具"><a href="#GRUNT-–-JavaScript-世界的构建工具" class="headerlink" title="GRUNT – JavaScript 世界的构建工具"></a>GRUNT – JavaScript 世界的构建工具</h1><h2 id="为何要用构建工具？"><a href="#为何要用构建工具？" class="headerlink" title="为何要用构建工具？"></a>为何要用构建工具？</h2><blockquote>
 <p>一句话：自动化。对于需要反复重复的任务，例如压缩（minification）、编译、单元测试、linting等，自动化工具可以减轻你的劳动，简化你的工作。当你在 Gruntfile 文件正确配置好了任务，任务运行器就会自动帮你或你的小组完成大部分无聊的工作。—-grunt官网</p>
@@ -130,6 +136,7 @@
 <h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>使用grunt自动构建HTML项目，将stylus转化为浏览器可识别的css代码，并且支持项目的热更新。</p>
 <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1.nodejs环境</p>
 <p>2.npm管理工具</p>
+<a id="more"></a>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">mkdir my-project</div><div class="line"><span class="built_in">cd</span>  my-project</div><div class="line"></div><div class="line">npm init</div><div class="line">npm install</div><div class="line">npm install -g grunt-cli</div><div class="line">npm install grunt --save-dev  //安装Grunt最新版本到项目目录中</div><div class="line">npm install grunt-contrib-connect --save-dev  //一个小型的服务器</div><div class="line">npm install grunt-contrib-stylus --save-dev //stylus编写styl输出css</div><div class="line">npm install grunt-contrib-watch --save-dev  //监视文件变动，做出相应动作</div></pre></td></tr></table></figure>
 <p>至此，所需依赖安装完毕。</p>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>1.创建项目结构</p>
@@ -146,7 +153,12 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;GRUNT-–-JavaScript-世界的构建工具&quot;&gt;&lt;a href=&quot;#GRUNT-–-JavaScript-世界的构建工具&quot; class=&quot;headerlink&quot; title=&quot;GRUNT – JavaScript 世界的构建工具&quot;&gt;&lt;/a&gt;GRUNT – 
+      &lt;h1 id=&quot;GRUNT-–-JavaScript-世界的构建工具&quot;&gt;&lt;a href=&quot;#GRUNT-–-JavaScript-世界的构建工具&quot; class=&quot;headerlink&quot; title=&quot;GRUNT – JavaScript 世界的构建工具&quot;&gt;&lt;/a&gt;GRUNT – JavaScript 世界的构建工具&lt;/h1&gt;&lt;h2 id=&quot;为何要用构建工具？&quot;&gt;&lt;a href=&quot;#为何要用构建工具？&quot; class=&quot;headerlink&quot; title=&quot;为何要用构建工具？&quot;&gt;&lt;/a&gt;为何要用构建工具？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;一句话：自动化。对于需要反复重复的任务，例如压缩（minification）、编译、单元测试、linting等，自动化工具可以减轻你的劳动，简化你的工作。当你在 Gruntfile 文件正确配置好了任务，任务运行器就会自动帮你或你的小组完成大部分无聊的工作。—-grunt官网&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;案例&quot;&gt;&lt;a href=&quot;#案例&quot; class=&quot;headerlink&quot; title=&quot;案例&quot;&gt;&lt;/a&gt;案例&lt;/h2&gt;&lt;p&gt;使用grunt自动构建HTML项目，将stylus转化为浏览器可识别的css代码，并且支持项目的热更新。&lt;/p&gt;
+&lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备&quot;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;p&gt;1.nodejs环境&lt;/p&gt;
+&lt;p&gt;2.npm管理工具&lt;/p&gt;
     
     </summary>
     
@@ -182,7 +194,7 @@
     <link href="https://yangdon.github.io/2017/10/15/JAVA-23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>https://yangdon.github.io/2017/10/15/JAVA-23种设计模式/</id>
     <published>2017-10-15T06:34:27.000Z</published>
-    <updated>2017-10-15T08:05:36.736Z</updated>
+    <updated>2017-11-02T16:32:28.998Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JAVA-23种设计模式"><a href="#JAVA-23种设计模式" class="headerlink" title="JAVA-23种设计模式"></a>JAVA-23种设计模式</h1><p>转自： <a href="http://blog.csdn.net/zhangerqing/article/details/8194653" target="_blank" rel="external">http://blog.csdn.net/zhangerqing/article/details/8194653</a></p>
 <h2 id="一、设计模式"><a href="#一、设计模式" class="headerlink" title="一、设计模式"></a>一、设计模式</h2><p>设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
@@ -192,6 +204,7 @@
 <p><strong>行为型</strong> 模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
 <p>其实还有两类：<strong>并发型</strong> 模式和 <strong>线程池</strong> 模式。用一个图片来整体描述一下：</p>
 <p><img src="../../static/images/1354152786_2930.jpg" alt="Alt text"></p>
+<a id="more"></a>
 <h2 id="三、设计模式的六大原则"><a href="#三、设计模式的六大原则" class="headerlink" title="三、设计模式的六大原则"></a>三、设计模式的六大原则</h2><h3 id="1-开闭原则（Open-Close-Principle）"><a href="#1-开闭原则（Open-Close-Principle）" class="headerlink" title="1.开闭原则（Open Close Principle）"></a>1.开闭原则（Open Close Principle）</h3><p>开闭原则就是说对 <strong>扩展开放</strong>，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个 <strong>热插拔</strong> 的效果。所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p>
 <h3 id="2-里氏代换原则（Liskov-Substitution-Principle）"><a href="#2-里氏代换原则（Liskov-Substitution-Principle）" class="headerlink" title="2.里氏代换原则（Liskov Substitution Principle）"></a>2.里氏代换原则（Liskov Substitution Principle）</h3><p>里氏代换原则(Liskov Substitution Principle LSP)面向对象设计的基本原则之一。 里氏代换原则中说，<strong>任何基类可以出现的地方，子类一定可以出现</strong>。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。里氏代换原则是对“开-闭”原则的补充。实现“开-闭”原则的关键步骤就是 <strong>抽象化</strong>。而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。—— From Baidu 百科</p>
 <h3 id="3-依赖倒转原则（Dependence-Inversion-Principle）"><a href="#3-依赖倒转原则（Dependence-Inversion-Principle）" class="headerlink" title="3.依赖倒转原则（Dependence Inversion Principle）"></a>3.依赖倒转原则（Dependence Inversion Principle）</h3><p>这个是开闭原则的基础，具体内容：<strong>真对接口编程，依赖于抽象而不依赖于具体</strong>。</p>
@@ -202,7 +215,14 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;JAVA-23种设计模式&quot;&gt;&lt;a href=&quot;#JAVA-23种设计模式&quot; class=&quot;headerlink&quot; title=&quot;JAVA-23种设计模式&quot;&gt;&lt;/a&gt;JAVA-23种设计模式&lt;/h1&gt;&lt;p&gt;转自： &lt;a href=&quot;http://blog.csdn.
+      &lt;h1 id=&quot;JAVA-23种设计模式&quot;&gt;&lt;a href=&quot;#JAVA-23种设计模式&quot; class=&quot;headerlink&quot; title=&quot;JAVA-23种设计模式&quot;&gt;&lt;/a&gt;JAVA-23种设计模式&lt;/h1&gt;&lt;p&gt;转自： &lt;a href=&quot;http://blog.csdn.net/zhangerqing/article/details/8194653&quot;&gt;http://blog.csdn.net/zhangerqing/article/details/8194653&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一、设计模式&quot;&gt;&lt;a href=&quot;#一、设计模式&quot; class=&quot;headerlink&quot; title=&quot;一、设计模式&quot;&gt;&lt;/a&gt;一、设计模式&lt;/h2&gt;&lt;p&gt;设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。&lt;/p&gt;
+&lt;h2 id=&quot;二、设计模式的分类&quot;&gt;&lt;a href=&quot;#二、设计模式的分类&quot; class=&quot;headerlink&quot; title=&quot;二、设计模式的分类&quot;&gt;&lt;/a&gt;二、设计模式的分类&lt;/h2&gt;&lt;p&gt;总体来说设计模式分为三大类：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;创建型&lt;/strong&gt; 模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结构型&lt;/strong&gt; 模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;行为型&lt;/strong&gt; 模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。&lt;/p&gt;
+&lt;p&gt;其实还有两类：&lt;strong&gt;并发型&lt;/strong&gt; 模式和 &lt;strong&gt;线程池&lt;/strong&gt; 模式。用一个图片来整体描述一下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../static/images/1354152786_2930.jpg&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -236,7 +256,7 @@
     <link href="https://yangdon.github.io/2017/10/13/Java1-8%E6%96%B0%E7%89%B9%E6%80%A7-Collectors/"/>
     <id>https://yangdon.github.io/2017/10/13/Java1-8新特性-Collectors/</id>
     <published>2017-10-13T12:05:30.000Z</published>
-    <updated>2017-10-13T13:30:30.762Z</updated>
+    <updated>2017-11-02T16:32:58.835Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Java1-8新特性–Collector"><a href="#Java1-8新特性–Collector" class="headerlink" title="Java1.8新特性–Collector"></a>Java1.8新特性–Collector</h1><p>转自 <a href="http://blog.csdn.net/u013291394/article/details/52662761" target="_blank" rel="external">http://blog.csdn.net/u013291394/article/details/52662761</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">java.util.stream</div><div class="line"></div><div class="line">Interface Collector&lt;T,A,R&gt;</div><div class="line"></div><div class="line">参数类型</div><div class="line">T - T的输入元素的类型</div><div class="line">A - A的可变累积类型（通常作为实现细节隐藏）</div><div class="line">R - R的结果类型</div></pre></td></tr></table></figure>
@@ -244,6 +264,7 @@
 <p><strong>将数据流缩减为一个单一值：</strong> 一个流执行后的结果能够被缩减为一个单一的值。单一的值可以是一个Collection，或者像int、double等的数值，再或者是一个用户自定义的值对象。</p>
 <p><strong>将一个数据流中的元素进行分组：</strong> 根据任务类型将流中所有的任务进行分组。这将产生一个Map<tasktype, list<task="">&gt;的结果，其中每个实体包含一个任务类型以及与它相关的任务。你也可以使用除了列表以外的任何其他的集合。如果你不需要与一任务类型相关的所有的任务，你可以选择产生一个Map<tasktype, task="">。这是一个能够根据任务类型对任务进行分类并获取每类任务中第一个任务的例子。</tasktype,></tasktype,></p>
 <p><strong>分割一个流中的元素：</strong> 你可以将一个流分割为两组——比如将任务分割为要做和已经做完的任务。</p>
+<a id="more"></a>
 <h3 id="Collector实际应用"><a href="#Collector实际应用" class="headerlink" title="Collector实际应用:"></a>Collector实际应用:</h3><p>在Java8中，我们可以通过编写如下的代码达到将任务根据类型分组的目的。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;TaskType, List&lt;Task&gt;&gt; groupTasksByType(List&lt;Task&gt; tasks) &#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().collect(Collectors.groupingBy(task -&gt; task.getType()));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面的代码使用了定义在辅助类Collectors中的groupingBy收集器。它创建了一个映射，其中TaskType是它的键，而包含了所有拥有相同TaskType的任务的列表是它的值。为了在Java7中达到相同的效果，你需要编写如下的代码。</p>
@@ -295,7 +316,12 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Java1-8新特性–Collector&quot;&gt;&lt;a href=&quot;#Java1-8新特性–Collector&quot; class=&quot;headerlink&quot; title=&quot;Java1.8新特性–Collector&quot;&gt;&lt;/a&gt;Java1.8新特性–Collector&lt;/h1&gt;&lt;
+      &lt;h1 id=&quot;Java1-8新特性–Collector&quot;&gt;&lt;a href=&quot;#Java1-8新特性–Collector&quot; class=&quot;headerlink&quot; title=&quot;Java1.8新特性–Collector&quot;&gt;&lt;/a&gt;Java1.8新特性–Collector&lt;/h1&gt;&lt;p&gt;转自 &lt;a href=&quot;http://blog.csdn.net/u013291394/article/details/52662761&quot;&gt;http://blog.csdn.net/u013291394/article/details/52662761&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;java.util.stream&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Interface Collector&amp;lt;T,A,R&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;参数类型&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;T - T的输入元素的类型&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;A - A的可变累积类型（通常作为实现细节隐藏）&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;R - R的结果类型&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。&quot;&gt;&lt;a href=&quot;#collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。&quot; class=&quot;headerlink&quot; title=&quot;collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。&quot;&gt;&lt;/a&gt;collect是一个将数据流缩减为一个值的归约操作。这个值可以是集合、映射，或者一个值对象。&lt;/h3&gt;&lt;p&gt;你可以使用collect达到以下目的：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将数据流缩减为一个单一值：&lt;/strong&gt; 一个流执行后的结果能够被缩减为一个单一的值。单一的值可以是一个Collection，或者像int、double等的数值，再或者是一个用户自定义的值对象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将一个数据流中的元素进行分组：&lt;/strong&gt; 根据任务类型将流中所有的任务进行分组。这将产生一个Map&lt;TaskType, List&lt;Task&gt;&amp;gt;的结果，其中每个实体包含一个任务类型以及与它相关的任务。你也可以使用除了列表以外的任何其他的集合。如果你不需要与一任务类型相关的所有的任务，你可以选择产生一个Map&lt;TaskType, Task&gt;。这是一个能够根据任务类型对任务进行分类并获取每类任务中第一个任务的例子。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分割一个流中的元素：&lt;/strong&gt; 你可以将一个流分割为两组——比如将任务分割为要做和已经做完的任务。&lt;/p&gt;
     
     </summary>
     
@@ -399,7 +425,7 @@
     <link href="https://yangdon.github.io/2017/08/08/JAVA-JNI%E5%9F%BA%E7%A1%80/"/>
     <id>https://yangdon.github.io/2017/08/08/JAVA-JNI基础/</id>
     <published>2017-08-08T11:55:51.000Z</published>
-    <updated>2017-08-08T16:31:05.786Z</updated>
+    <updated>2017-11-02T16:32:40.484Z</updated>
     
     <content type="html"><![CDATA[<h2 id="JNI概述"><a href="#JNI概述" class="headerlink" title="JNI概述"></a>JNI概述</h2><p>JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。</p>
 <p>JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持JNI的所有Java VM配合使用。</p>
@@ -412,6 +438,7 @@
 <li>执行运行时类型检查。</li>
 </ul>
 <p>您还可以使用JNI与Invocation API来启用任意本地应用程序来嵌入Java VM。这使得程序员可以轻松地使其现有应用程序启用Java，而无需与VM源代码链接。</p>
+<a id="more"></a>
 <h2 id="JNI接口指针"><a href="#JNI接口指针" class="headerlink" title="JNI接口指针"></a>JNI接口指针</h2><p>本地代码(Native code)通过调用JNI函数来访问Java VM功能。JNI函数可通过接口指针获得。接口指针是指向指针的指针。指针指向一个指针数组，每个指针指向一个接口函数。每个接口函数都在数组内的一个预定义的偏移量。</p>
 <p>JNI接口指针：</p>
 <p><img src="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/images/designa.gif" alt="Alt text"></p>
@@ -422,7 +449,17 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;JNI概述&quot;&gt;&lt;a href=&quot;#JNI概述&quot; class=&quot;headerlink&quot; title=&quot;JNI概述&quot;&gt;&lt;/a&gt;JNI概述&lt;/h2&gt;&lt;p&gt;JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Jav
+      &lt;h2 id=&quot;JNI概述&quot;&gt;&lt;a href=&quot;#JNI概述&quot; class=&quot;headerlink&quot; title=&quot;JNI概述&quot;&gt;&lt;/a&gt;JNI概述&lt;/h2&gt;&lt;p&gt;JNI(Java Native Interface)是一个本地编程接口。它允许在Java虚拟机（VM）中运行的Java代码与以其他编程语言（如C，C ++和汇编）编写的应用程序和库进行互操作。&lt;/p&gt;
+&lt;p&gt;JNI最重要的优点是它对基础Java VM的实现没有限制。因此，Java VM供应商可以添加对JNI的支持，而不会影响VM的其他部分。程序员可以编写本地应用程序或库的一个版本，并且它将能够与支持JNI的所有Java VM配合使用。&lt;/p&gt;
+&lt;p&gt;通过JNI编程，您可以使用本机方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建，检查和更新Java对象（包括数组和字符串）。&lt;/li&gt;
+&lt;li&gt;调用Java方法。&lt;/li&gt;
+&lt;li&gt;抓住并抛出异常。&lt;/li&gt;
+&lt;li&gt;加载类并获取类信息。&lt;/li&gt;
+&lt;li&gt;执行运行时类型检查。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;您还可以使用JNI与Invocation API来启用任意本地应用程序来嵌入Java VM。这使得程序员可以轻松地使其现有应用程序启用Java，而无需与VM源代码链接。&lt;/p&gt;
     
     </summary>
     

@@ -16,7 +16,7 @@ collect是一个将数">
 <meta property="og:description" content="Java1.8新特性–Collector转自 http://blog.csdn.net/u013291394/article/details/52662761
 12345678java.util.streamInterface Collector&amp;lt;T,A,R&amp;gt;参数类型T - T的输入元素的类型A - A的可变累积类型（通常作为实现细节隐藏）R - R的结果类型
 collect是一个将数">
-<meta property="og:updated_time" content="2017-10-13T13:30:30.762Z">
+<meta property="og:updated_time" content="2017-11-02T16:32:58.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java1.8新特性--Collectors">
 <meta name="twitter:description" content="Java1.8新特性–Collector转自 http://blog.csdn.net/u013291394/article/details/52662761
@@ -237,6 +237,7 @@ var _hmt = _hmt || [];
 <p><strong>将数据流缩减为一个单一值：</strong> 一个流执行后的结果能够被缩减为一个单一的值。单一的值可以是一个Collection，或者像int、double等的数值，再或者是一个用户自定义的值对象。</p>
 <p><strong>将一个数据流中的元素进行分组：</strong> 根据任务类型将流中所有的任务进行分组。这将产生一个Map<tasktype, list<task="">&gt;的结果，其中每个实体包含一个任务类型以及与它相关的任务。你也可以使用除了列表以外的任何其他的集合。如果你不需要与一任务类型相关的所有的任务，你可以选择产生一个Map<tasktype, task="">。这是一个能够根据任务类型对任务进行分类并获取每类任务中第一个任务的例子。</tasktype,></tasktype,></p>
 <p><strong>分割一个流中的元素：</strong> 你可以将一个流分割为两组——比如将任务分割为要做和已经做完的任务。</p>
+<a id="more"></a>
 <h3 id="Collector实际应用"><a href="#Collector实际应用" class="headerlink" title="Collector实际应用:"></a>Collector实际应用:</h3><p>在Java8中，我们可以通过编写如下的代码达到将任务根据类型分组的目的。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> Map&lt;TaskType, List&lt;Task&gt;&gt; groupTasksByType(List&lt;Task&gt; tasks) &#123;</div><div class="line">    <span class="keyword">return</span> tasks.stream().collect(Collectors.groupingBy(task -&gt; task.getType()));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面的代码使用了定义在辅助类Collectors中的groupingBy收集器。它创建了一个映射，其中TaskType是它的键，而包含了所有拥有相同TaskType的任务的列表是它的值。为了在Java7中达到相同的效果，你需要编写如下的代码。</p>
@@ -294,7 +295,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="https://yangdon.github.io/2017/10/13/Java1-8新特性-Collectors/" data-id="cj9iord99000b0096o8q7zbf8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yangdon.github.io/2017/10/13/Java1-8新特性-Collectors/" data-id="cj9ioxqq4000gck96nyxxhvwx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
